@@ -109,7 +109,7 @@ animateElements.forEach(el => {
 // ==========================================
 // FORM HANDLING - Connexion avec le backend
 // ==========================================
-const API_URL = 'http://localhost:5003/dept';
+const API_URL = 'https://backendiat.onrender.com/dept';
 const contactForm = document.querySelector('.contact-form');
 
 if (contactForm) {
