@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio IATEK - Découvrez nos projets de digitalisation pour entreprises sénégalaises et africaines">
+    <title>Nos Projets - Portfolio IATEK | Digitalisation en Afrique</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="projets-styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header__content">
+                <div class="header__logo">
+                    <a href="index.html">
+                        <img src="images/logoiat.jpeg" alt="IATEK Logo" class="logo">
+                    </a>
+                </div>
+
+                <nav class="nav" id="mainNav">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="index.html#accueil" class="nav__link">Accueil</a></li>
+                        <li class="nav__item"><a href="index.html#services" class="nav__link">Services</a></li>
+                        <li class="nav__item"><a href="index.html#tarifs" class="nav__link">Tarifs</a></li>
+                        <li class="nav__item"><a href="projets.html" class="nav__link">Projets</a></li>
+                        <li class="nav__item"><a href="index.html#apropos" class="nav__link">À propos</a></li>
+                        <li class="nav__item"><a href="index.html#contact" class="nav__link nav__link--cta">Contact</a></li>
+                    </ul>
+                </nav>
+
+                <button class="hamburger" id="hamburger" aria-label="Menu">
+                    <span class="hamburger__line"></span>
+                    <span class="hamburger__line"></span>
+                    <span class="hamburger__line"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Portfolio -->
+    <section class="portfolio-hero">
+        <div class="container">
+            <div class="portfolio-hero__content">
+                <span class="section-tag">Portfolio</span>
+                <h1 class="section-title">Nos Réalisations</h1>
+                <p class="section-subtitle">Découvrez comment nous transformons les idées en solutions digitales performantes pour nos clients au Sénégal et en Afrique</p>
+
+                <!-- Filtres -->
+                <div class="portfolio-filters">
+                    <button class="filter-btn active" data-filter="all">Tous les projets</button>
+                    <button class="filter-btn" data-filter="web">Web & E-commerce</button>
+                    <button class="filter-btn" data-filter="mobile">Applications Mobile</button>
+                    <button class="filter-btn" data-filter="saas">Plateformes SAAS</button>
+                    <button class="filter-btn" data-filter="ia">IA & Automatisation</button>
+                    <button class="filter-btn" data-filter="branding">Branding Digital</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projets Grid -->
+    <section class="portfolio-projects">
+        <div class="container">
+
+            <!-- Projet 1: E-commerce Premium -->
+            <article class="project-detail" data-category="web">
+                <div class="project-detail__grid">
+                    <div class="project-detail__media">
+                        <div class="project-detail__main-image">
+                            <img src="images/logoiat.jpeg" alt="E-commerce Premium" loading="lazy">
+                            <div class="project-badge project-badge--featured">Projet Phare</div>
+                        </div>
+                        <div class="project-detail__gallery">
+                            <img src="images/iat1.png" alt="Dashboard" loading="lazy">
+                            <img src="images/iat2.jpg" alt="Mobile view" loading="lazy">
+                            <img src="images/iat4.png" alt="Checkout" loading="lazy">
+                        </div>
+                    </div>
+
+                    <div class="project-detail__content">
+                        <div class="project-detail__header">
+                            <div class="project-tags">
+                                <span class="project-tag">E-commerce</span>
+                                <span class="project-tag">React</span>
+                                <span class="project-tag">Node.js</span>
+                                <span class="project-tag">Wave API</span>
+                            </div>
+                            <h2 class="project-detail__title">Plateforme E-commerce Premium</h2>
+                            <p class="project-detail__subtitle">Boutique en ligne pour marque de mode sénégalaise</p>
+                        </div>
+
+                        <div class="project-detail__description">
+                            <h3>Le Défi</h3>
+                            <p>Notre client, une marque de mode locale en pleine croissance, perdait 60% de ses ventes potentielles car les clients devaient commander par WhatsApp. Processus long, erreurs fréquentes, et image peu professionnelle.</p>
+
+                            <h3>Notre Solution</h3>
+                            <p>Nous avons créé une plateforme e-commerce moderne intégrant :</p>
+                            <ul class="project-features-list">
+                                <li><strong>Catalogue dynamique</strong> avec filtres avancés (taille, couleur, prix, disponibilité)</li>
+                                <li><strong>Paiement local</strong> via Wave et Orange Money + virement bancaire</li>
+                                <li><strong>Gestion des stocks</strong> en temps réel avec alertes automatiques</li>
+                                <li><strong>Dashboard admin</strong> pour suivre commandes, clients, statistiques</li>
+                                <li><strong>Système de livraison</strong> avec tracking et notifications SMS</li>
+                                <li><strong>Programme de fidélité</strong> avec points et réductions</li>
+                            </ul>
+
+                            <h3>Résultats Mesurés</h3>
+                            <div class="project-stats">
+                                <div class="stat-item">
+                                    <div class="stat-number">+180%</div>
+                                    <div class="stat-label">Ventes en 3 mois</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-number">2 500+</div>
+                                    <div class="stat-label">Commandes traitées</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-number">-70%</div>
+                                    <div class="stat-label">Temps de traitement</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-number">4.8/5</div>
+                                    <div class="stat-label">Satisfaction client</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-detail__meta">
+                            <div class="meta-item">
+                                <strong>Client:</strong> Marque de mode sénégalaise
+                            </div>
+                            <div class="meta-item">
+                                <strong>Durée:</strong> 6 semaines
+                            </div>
+                            <div class="meta-item">
+                                <strong>Budget:</strong> 650K FCFA
+                            </div>
+                            <div class="meta-item">
+                                <strong>Technologies:</strong> React, Node.js, MongoDB, Wave API
+                            </div>
+                        </div>
+
+                        <div class="project-detail__cta">
+                            <a href="index.html#contact" class="btn btn--primary">Projet similaire ?</a>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Projet 2: Application Mobile Fintech -->
+            <article class="project-detail" data-category="mobile">
+                <div class="project-detail__grid project-detail__grid--reverse">
+                    <div class="project-detail__media">
+                        <div class="project-detail__main-image">
+                            <img src="images/iat2.jpg" alt="App Mobile Fintech" loading="lazy">
+                            <div class="project-badge project-badge--new">Récent</div>
+                        </div>
+                        <div class="project-detail__gallery">
+                            <img src="images/iat1.png" alt="Login screen" loading="lazy">
+                            <img src="images/iat3.jpg" alt="Dashboard" loading="lazy">
+                            <img src="images/iat5.jpeg" alt="Transactions" loading="lazy">
+                        </div>
+                    </div>
+
+                    <div class="project-detail__content">
+                        <div class="project-detail__header">
+                            <div class="project-tags">
+                                <span class="project-tag">Mobile</span>
+                                <span class="project-tag">Flutter</span>
+                                <span class="project-tag">Fintech</span>
+                                <span class="project-tag">API</span>
+                            </div>
+                            <h2 class="project-detail__title">App Mobile de Gestion Financière</h2>
+                            <p class="project-detail__subtitle">Application de micro-crédit pour entrepreneurs</p>
+                        </div>
+
+                        <div class="project-detail__description">
+                            <h3>Le Défi</h3>
+                            <p>Une fintech locale voulait démocratiser l'accès au crédit pour les petits entrepreneurs. Le processus traditionnel (papier, visites en agence) prenait 2-3 semaines et décourageait 70% des demandeurs.</p>
+
+                            <h3>Notre Solution</h3>
+                            <p>Application mobile complète permettant :</p>
+                            <ul class="project-features-list">
+                                <li><strong>Inscription rapide</strong> avec vérification d'identité (CNI + selfie) en 5 min</li>
+                                <li><strong>Demande de crédit</strong> simplifiée avec calcul instant du taux et montant</li>
+                                <li><strong>Scoring automatique</strong> basé sur IA (historique mobile money, activité)</li>
+                                <li><strong>Approbation en 24h</strong> avec notification push temps réel</li>
+                                <li><strong>Remboursement flexible</strong> via Wave/Orange Money avec rappels SMS</li>
+                                <li><strong>Historique complet</strong> et score de crédit personnalisé</li>
+                            </ul>
+
+                            <h3>Résultats Mesurés</h3>
+                            <div class="project-stats">
+                                <div class="stat-item">
+                                    <div class="stat-number">5 000+</div>
+                                    <div class="stat-label">Utilisateurs actifs</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-number">-85%</div>
+                                    <div class="stat-label">Temps d'approbation</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-number">92%</div>
+                                    <div class="stat-label">Taux de remboursement</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-number">150M+</div>
+                                    <div class="stat-label">FCFA débloqués</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-detail__meta">
+                            <div class="meta-item">
+                                <strong>Client:</strong> Fintech sénégalaise
+                            </div>
+                            <div class="meta-item">
+                                <strong>Durée:</strong> 10 semaines
+                            </div>
+                            <div class="meta-item">
+                                <strong>Budget:</strong> 1.8M FCFA
+                            </div>
+                            <div class="meta-item">
+                                <strong>Technologies:</strong> Flutter, Firebase, Python (IA), API Wave
+                            </div>
+                        </div>
+
+                        <div class="project-detail__cta">
+                            <a href="index.html#contact" class="btn btn--primary">Discuter de mon app</a>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Projet 3: Plateforme SAAS de Gestion -->
+            <article class="project-detail" data-category="saas">
+                <div class="project-detail__grid">
+                    <div class="project-detail__media">
+                        <div class="project-detail__main-image">
+                            <img src="images/iat4.png" alt="SAAS Platform" loading="lazy">
+                        </div>
+                        <div class="project-detail__gallery">
+                            <img src="images/iat6.jpg" alt="Analytics" loading="lazy">
+                            <img src="images/iat3.jpg" alt="Settings" loading="lazy">
+                            <img src="images/iat1.png" alt="Reports" loading="lazy">
+                        </div>
+                    </div>
+
+                    <div class="project-detail__content">
+                        <div class="project-detail__header">
+                            <div class="project-tags">
+                                <span class="project-tag">SAAS</span>
+                                <span class="project-tag">Next.js</span>
+                                <span class="project-tag">PostgreSQL</span>
+                                <span class="project-tag">Multi-tenant</span>
+                            </div>
+                            <h2 class="project-detail__title">Plateforme SAAS de Gestion Hôtelière</h2>
+                            <p class="project-detail__subtitle">Solution tout-en-un pour hôtels et auberges</p>
+                        </div>
+
+                        <div class="project-detail__description">
+                            <h3>Le Défi</h3>
+                            <p>Un groupe hôtelier gérait 5 établissements avec Excel et WhatsApp. Overbooking fréquent, perte de données clients, impossibilité de suivre les performances en temps réel.</p>
+
+                            <h3>Notre Solution</h3>
+                            <p>Plateforme SAAS centralisée offrant :</p>
+                            <ul class="project-features-list">
+                                <li><strong>Système de réservation</strong> en ligne avec calendrier unifié multi-établissements</li>
+                                <li><strong>Gestion des chambres</strong> : disponibilité, tarifs dynamiques, housekeeping</li>
+                                <li><strong>CRM intégré</strong> : historique clients, préférences, fidélité</li>
+                                <li><strong>Facturation automatique</strong> avec génération PDF et envoi par email</li>
+                                <li><strong>Tableaux de bord</strong> : occupation, revenus, prévisions par établissement</li>
+                                <li><strong>Application mobile</strong> pour le personnel (check-in/out rapide)</li>
+                                <li><strong>Multi-utilisateurs</strong> avec rôles et permissions personnalisés</li>
+                            </ul>
+
+                            <h3>Résultats Mesurés</h3>
+                            <div class="project-stats">
+                                <div class="stat-item">
+                                    <div class="stat-number">+35%</div>
+                                    <div class="stat-label">Taux d'occupation</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-number">0</div>
+                                    <div class="stat-label">Overbooking depuis</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-number">-60%</div>
+                                    <div class="stat-label">Temps admin</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-number">+50%</div>
+                                    <div class="stat-label">Clients fidèles</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-detail__meta">
+                            <div class="meta-item">
+                                <strong>Client:</strong> Groupe hôtelier (5 établissements)
+                            </div>
+                            <div class="meta-item">
+                                <strong>Durée:</strong> 12 semaines
+                            </div>
+                            <div class="meta-item">
+                                <strong>Budget:</strong> Sur devis (2.5M FCFA)
+                            </div>
+                            <div class="meta-item">
+                                <strong>Technologies:</strong> Next.js, PostgreSQL, Redis, Stripe
+                            </div>
+                            <div class="meta-item">
+                                <strong>Modèle:</strong> Abonnement mensuel 25K FCFA/établissement
+                            </div>
+                        </div>
+
+                        <div class="project-detail__cta">
+                            <a href="index.html#contact" class="btn btn--primary">Besoin d'une plateforme ?</a>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Projet 4: Automatisation IA -->
+            <article class="project-detail" data-category="ia">
+                <div class="project-detail__grid project-detail__grid--reverse">
+                    <div class="project-detail__media">
+                        <div class="project-detail__main-image">
+                            <img src="images/iat3.jpg" alt="IA Automation" loading="lazy">
+                            <div class="project-badge project-badge--innovation">Innovation</div>
+                        </div>
+                        <div class="project-detail__gallery">
+                            <img src="images/iat4.png" alt="Chatbot" loading="lazy">
+                            <img src="images/iat2.jpg" alt="Analytics" loading="lazy">
+                            <img src="images/iat5.jpeg" alt="Dashboard" loading="lazy">
+                        </div>
+                    </div>
+
+                    <div class="project-detail__content">
+                        <div class="project-detail__header">
+                            <div class="project-tags">
+                                <span class="project-tag">IA</span>
+                                <span class="project-tag">Automatisation</span>
+                                <span class="project-tag">Python</span>
+                                <span class="project-tag">NLP</span>
+                            </div>
+                            <h2 class="project-detail__title">Assistant IA pour Service Client</h2>
+                            <p class="project-detail__subtitle">Chatbot intelligent multilingue (Français/Wolof)</p>
+                        </div>
+
+                        <div class="project-detail__description">
+                            <h3>Le Défi</h3>
+                            <p>Une grande entreprise de télécommunications recevait 500+ appels/jour avec les mêmes questions (facture, forfaits, pannes). 3 agents débordés, temps d'attente de 45 min, clients frustrés.</p>
+
+                            <h3>Notre Solution</h3>
+                            <p>Chatbot IA conversationnel capable de :</p>
+                            <ul class="project-features-list">
+                                <li><strong>Répondre 24/7</strong> en français et wolof avec compréhension naturelle</li>
+                                <li><strong>Résoudre 80% des demandes</strong> : solde, forfaits, panne réseau, FAQ</li>
+                                <li><strong>Authentification sécurisée</strong> par numéro de téléphone + code SMS</li>
+                                <li><strong>Paiement direct</strong> de factures via Wave dans la conversation</li>
+                                <li><strong>Escalade intelligente</strong> vers agent humain si demande complexe</li>
+                                <li><strong>Apprentissage continu</strong> : s'améliore avec chaque interaction</li>
+                                <li><strong>Analytics</strong> : questions fréquentes, satisfaction, temps de résolution</li>
+                            </ul>
+
+                            <h3>Résultats Mesurés</h3>
+                            <div class="project-stats">
+                                <div class="stat-item">
+                                    <div class="stat-number">82%</div>
+                                    <div class="stat-label">Demandes auto-résolues</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-number">-75%</div>
+                                    <div class="stat-label">Appels entrants</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-number">2 min</div>
+                                    <div class="stat-label">Temps moyen de réponse</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-number">4.6/5</div>
+                                    <div class="stat-label">Satisfaction</div>
+                                </div>
+                            </div>
+
+                            <blockquote class="project-quote">
+                                "Le chatbot a transformé notre service client. Nos agents peuvent maintenant se concentrer sur les cas complexes, et nos clients obtiennent des réponses instantanées, même à 2h du matin."
+                                <cite>— Directeur Service Client</cite>
+                            </blockquote>
+                        </div>
+
+                        <div class="project-detail__meta">
+                            <div class="meta-item">
+                                <strong>Client:</strong> Entreprise de télécommunications
+                            </div>
+                            <div class="meta-item">
+                                <strong>Durée:</strong> 8 semaines
+                            </div>
+                            <div class="meta-item">
+                                <strong>Budget:</strong> 450K FCFA
+                            </div>
+                            <div class="meta-item">
+                                <strong>Technologies:</strong> Python, OpenAI GPT, Rasa, WhatsApp API
+                            </div>
+                            <div class="meta-item">
+                                <strong>ROI:</strong> Économie de 2 agents (8M FCFA/an)
+                            </div>
+                        </div>
+
+                        <div class="project-detail__cta">
+                            <a href="index.html#contact" class="btn btn--primary">Automatiser mon service client</a>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Projet 5: Branding Digital Complet -->
+            <article class="project-detail" data-category="branding">
+                <div class="project-detail__grid">
+                    <div class="project-detail__media">
+                        <div class="project-detail__main-image">
+                            <img src="images/iat5.jpeg" alt="Branding" loading="lazy">
+                        </div>
+                        <div class="project-detail__gallery">
+                            <img src="images/iat1.png" alt="Logo variations" loading="lazy">
+                            <img src="images/iat6.jpg" alt="Brand guide" loading="lazy">
+                            <img src="images/iat4.png" alt="Mockups" loading="lazy">
+                        </div>
+                    </div>
+
+                    <div class="project-detail__content">
+                        <div class="project-detail__header">
+                            <div class="project-tags">
+                                <span class="project-tag">Branding</span>
+                                <span class="project-tag">Design</span>
+                                <span class="project-tag">Stratégie</span>
+                            </div>
+                            <h2 class="project-detail__title">Refonte Complète de Marque</h2>
+                            <p class="project-detail__subtitle">Startup agro-tech sénégalaise</p>
+                        </div>
+
+                        <div class="project-detail__description">
+                            <h3>Le Défi</h3>
+                            <p>Une startup prometteuse dans l'agriculture digitale avait un logo amateur fait sur Canva, pas de cohérence visuelle, et était perçue comme "pas sérieuse" par les investisseurs et grands clients.</p>
+
+                            <h3>Notre Solution</h3>
+                            <p>Refonte complète de l'identité visuelle et stratégie de marque :</p>
+                            <ul class="project-features-list">
+                                <li><strong>Audit de marque</strong> : positionnement, valeurs, concurrents, cible</li>
+                                <li><strong>Logo professionnel</strong> : moderne, mémorable, déclinable (couleur/noir/blanc)</li>
+                                <li><strong>Charte graphique complète</strong> : couleurs, typographies, iconographie</li>
+                                <li><strong>Templates</strong> : cartes de visite, letterhead, présentations, réseaux sociaux</li>
+                                <li><strong>Guide de marque</strong> : document de 40 pages pour garantir la cohérence</li>
+                                <li><strong>Site web vitrine</strong> reflétant la nouvelle identité</li>
+                                <li><strong>Stratégie digitale</strong> : contenu, ton, présence réseaux sociaux</li>
+                            </ul>
+
+                            <h3>Résultats Mesurés</h3>
+                            <div class="project-stats">
+                                <div class="stat-item">
+                                    <div class="stat-number">+120%</div>
+                                    <div class="stat-label">Notoriété de marque</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-number">500K$</div>
+                                    <div class="stat-label">Levée de fonds réussie</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-number">+300%</div>
+                                    <div class="stat-label">Engagement réseaux</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-number">15</div>
+                                    <div class="stat-label">Grands comptes signés</div>
+                                </div>
+                            </div>
+
+                            <blockquote class="project-quote">
+                                "Le nouveau branding a changé la perception de notre entreprise. Les investisseurs nous prennent au sérieux, et nos clients nous font confiance. Meilleur investissement qu'on ait fait."
+                                <cite>— CEO, Startup Agro-tech</cite>
+                            </blockquote>
+                        </div>
+
+                        <div class="project-detail__meta">
+                            <div class="meta-item">
+                                <strong>Client:</strong> Startup agro-tech
+                            </div>
+                            <div class="meta-item">
+                                <strong>Durée:</strong> 5 semaines
+                            </div>
+                            <div class="meta-item">
+                                <strong>Budget:</strong> 380K FCFA
+                            </div>
+                            <div class="meta-item">
+                                <strong>Livrables:</strong> Logo, Charte, Templates, Guide, Site
+                            </div>
+                            <div class="meta-item">
+                                <strong>Impact:</strong> Levée de fonds 500K$ (6 mois après)
+                            </div>
+                        </div>
+
+                        <div class="project-detail__cta">
+                            <a href="index.html#contact" class="btn btn--primary">Refondre ma marque</a>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Projet 6: Site Web Corporate -->
+            <article class="project-detail" data-category="web">
+                <div class="project-detail__grid project-detail__grid--reverse">
+                    <div class="project-detail__media">
+                        <div class="project-detail__main-image">
+                            <img src="images/iat6.jpg" alt="Site Corporate" loading="lazy">
+                        </div>
+                        <div class="project-detail__gallery">
+                            <img src="images/iat2.jpg" alt="Homepage" loading="lazy">
+                            <img src="images/iat3.jpg" alt="About page" loading="lazy">
+                            <img src="images/iat1.png" alt="Services page" loading="lazy">
+                        </div>
+                    </div>
+
+                    <div class="project-detail__content">
+                        <div class="project-detail__header">
+                            <div class="project-tags">
+                                <span class="project-tag">Web</span>
+                                <span class="project-tag">Corporate</span>
+                                <span class="project-tag">SEO</span>
+                            </div>
+                            <h2 class="project-detail__title">Site Vitrine Corporate Premium</h2>
+                            <p class="project-detail__subtitle">Cabinet de conseil international</p>
+                        </div>
+
+                        <div class="project-detail__description">
+                            <h3>Le Défi</h3>
+                            <p>Un cabinet de conseil établi à Dakar n'avait pas de site web. Ils perdaient des appels d'offres car "pas de présence en ligne = pas professionnel" selon les clients internationaux.</p>
+
+                            <h3>Notre Solution</h3>
+                            <p>Site web corporate élégant et performant :</p>
+                            <ul class="project-features-list">
+                                <li><strong>Design premium</strong> : sobre, élégant, inspirant confiance</li>
+                                <li><strong>7 pages optimisées</strong> : Accueil, Services, Équipe, Projets, Blog, Carrières, Contact</li>
+                                <li><strong>SEO avancé</strong> : 1er sur Google pour "cabinet conseil Dakar"</li>
+                                <li><strong>Multilingue</strong> : Français/Anglais avec switch facile</li>
+                                <li><strong>Blog intégré</strong> avec CMS pour publier études de cas</li>
+                                <li><strong>Formulaires intelligents</strong> pour demandes de devis personnalisées</li>
+                                <li><strong>Performance maximale</strong> : temps de chargement <2s</li>
+                            </ul>
+
+                            <h3>Résultats Mesurés</h3>
+                            <div class="project-stats">
+                                <div class="stat-item">
+                                    <div class="stat-number">3 000+</div>
+                                    <div class="stat-label">Visiteurs/mois</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-number">+250%</div>
+                                    <div class="stat-label">Demandes de devis</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-number">#1</div>
+                                    <div class="stat-label">Google (mot-clé cible)</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-number">65%</div>
+                                    <div class="stat-label">Taux de conversion</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-detail__meta">
+                            <div class="meta-item">
+                                <strong>Client:</strong> Cabinet de conseil international
+                            </div>
+                            <div class="meta-item">
+                                <strong>Durée:</strong> 4 semaines
+                            </div>
+                            <div class="meta-item">
+                                <strong>Budget:</strong> 280K FCFA
+                            </div>
+                            <div class="meta-item">
+                                <strong>Technologies:</strong> Next.js, Strapi CMS, SEO
+                            </div>
+                        </div>
+
+                        <div class="project-detail__cta">
+                            <a href="index.html#contact" class="btn btn--primary">Créer mon site corporate</a>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section class="portfolio-cta">
+        <div class="container">
+            <div class="portfolio-cta__content">
+                <h2>Prêt à transformer votre idée en réalité ?</h2>
+                <p>Rejoignez les entreprises qui ont fait confiance à IATEK pour leur digitalisation</p>
+                <div class="portfolio-cta__buttons">
+                    <a href="index.html#contact" class="btn btn--primary btn--large">Discuter de mon projet</a>
+                    <a href="index.html#tarifs" class="btn btn--secondary btn--large">Voir les tarifs</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__brand">
+                    <img src="images/logoiat.jpeg" alt="IATEK Logo" class="footer__logo">
+                    <p>Digitalisation et innovation pour l'Afrique</p>
+                </div>
+                <div class="footer__links">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="index.html#accueil">Accueil</a></li>
+                        <li><a href="index.html#services">Services</a></li>
+                        <li><a href="projets.html">Projets</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer__contact">
+                    <h4>Contact</h4>
+                    <p>📧 contact@iatek.sn</p>
+                    <p>📱 +221 XX XXX XX XX</p>
+                    <p>📍 Dakar, Sénégal</p>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2025 IATEK. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script src="projets-script.js"></script>
+</body>
+</html>
