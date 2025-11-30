@@ -698,6 +698,52 @@ button {
     position: relative;
 }
 
+.services__more,
+.projects__more {
+    text-align: center;
+    margin-top: var(--spacing-xxl);
+}
+
+.services__more button,
+.projects__more button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: var(--transition);
+}
+
+.services__more button svg,
+.projects__more button svg {
+    transition: transform 0.3s ease;
+}
+
+.services__more button:hover svg.chevron-down,
+.projects__more button:hover svg.chevron-down {
+    transform: translateY(3px);
+}
+
+.services__more button:hover svg.chevron-up,
+.projects__more button:hover svg.chevron-up {
+    transform: translateY(-3px);
+}
+
+.services__grid--full,
+.projects__grid--full {
+    margin-top: var(--spacing-xl);
+    animation: slideDown 0.5s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .services__grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -883,7 +929,7 @@ button {
     background: var(--color-white);
     border: 2px solid var(--color-gray-200);
     border-radius: var(--radius-2xl);
-    padding: var(--spacing-xl);
+    padding: var(--spacing-lg);
     position: relative;
     transition: var(--transition-smooth);
     display: flex;
@@ -923,10 +969,10 @@ button {
 }
 
 .pricing-card__title {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     font-weight: var(--font-black);
     color: var(--color-primary);
-    margin-bottom: var(--spacing-md);
+    margin-bottom: var(--spacing-sm);
 }
 
 .pricing-card__price {
@@ -937,7 +983,7 @@ button {
 }
 
 .price-amount {
-    font-size: 3.5rem;
+    font-size: 3rem;
     font-weight: var(--font-black);
     color: var(--color-primary);
     line-height: 1;
@@ -951,21 +997,21 @@ button {
 
 .pricing-card__description {
     color: var(--color-gray-600);
-    margin-bottom: var(--spacing-lg);
-    font-size: 1rem;
+    margin-bottom: var(--spacing-md);
+    font-size: 0.9375rem;
 }
 
 .pricing-features {
     list-style: none;
-    margin-bottom: var(--spacing-xl);
+    margin-bottom: var(--spacing-lg);
     flex-grow: 1;
 }
 
 .pricing-features li {
-    padding: 0.75rem 0;
+    padding: 0.625rem 0;
     color: var(--color-gray-700);
-    font-size: 0.9375rem;
-    line-height: 1.6;
+    font-size: 0.875rem;
+    line-height: 1.5;
     border-bottom: 1px solid var(--color-gray-100);
     display: flex;
     align-items: flex-start;
@@ -995,17 +1041,17 @@ button {
 /* Additional Services */
 .additional-services {
     background: var(--color-gray-50);
-    padding: var(--spacing-xxl);
-    border-radius: var(--radius-2xl);
-    margin-bottom: var(--spacing-xl);
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-xl);
+    margin-bottom: var(--spacing-lg);
 }
 
 .additional-services__title {
-    font-size: 1.875rem;
+    font-size: 1.5rem;
     font-weight: var(--font-bold);
     color: var(--color-primary);
     text-align: center;
-    margin-bottom: var(--spacing-xl);
+    margin-bottom: var(--spacing-lg);
 }
 
 .additional-services__grid {
@@ -1016,8 +1062,8 @@ button {
 
 .addon-service {
     background: var(--color-white);
-    padding: var(--spacing-lg);
-    border-radius: var(--radius-xl);
+    padding: var(--spacing-md);
+    border-radius: var(--radius-lg);
     text-align: center;
     border: 1px solid var(--color-gray-200);
     transition: var(--transition);
@@ -1025,32 +1071,33 @@ button {
 
 .addon-service:hover {
     border-color: var(--color-accent);
-    transform: translateY(-5px);
+    transform: translateY(-3px);
     box-shadow: var(--shadow-md);
 }
 
 .addon-icon {
-    font-size: 2.5rem;
-    margin-bottom: var(--spacing-sm);
+    font-size: 2rem;
+    margin-bottom: 0.375rem;
 }
 
 .addon-service h4 {
-    font-size: 1.125rem;
+    font-size: 1rem;
     font-weight: var(--font-bold);
     color: var(--color-primary);
-    margin-bottom: var(--spacing-xs);
+    margin-bottom: 0.25rem;
 }
 
 .addon-price {
     color: var(--color-accent);
     font-weight: var(--font-bold);
-    font-size: 1rem;
-    margin-bottom: var(--spacing-xs);
+    font-size: 0.9375rem;
+    margin-bottom: 0.25rem;
 }
 
 .addon-desc {
     color: var(--color-gray-600);
-    font-size: 0.875rem;
+    font-size: 0.8125rem;
+    line-height: 1.4;
 }
 
 /* Pricing CTA */
@@ -1058,24 +1105,24 @@ button {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: var(--spacing-xl);
-    padding: var(--spacing-xxl);
+    gap: var(--spacing-lg);
+    padding: var(--spacing-lg);
     background: linear-gradient(135deg, rgba(0, 217, 255, 0.08) 0%, rgba(124, 58, 237, 0.08) 100%);
-    border-radius: var(--radius-2xl);
+    border-radius: var(--radius-xl);
     border: 2px solid rgba(0, 217, 255, 0.2);
-    margin-bottom: var(--spacing-lg);
+    margin-bottom: var(--spacing-md);
 }
 
 .pricing-cta__content h3 {
-    font-size: 1.75rem;
+    font-size: 1.375rem;
     font-weight: var(--font-bold);
     color: var(--color-primary);
-    margin-bottom: var(--spacing-xs);
+    margin-bottom: 0.25rem;
 }
 
 .pricing-cta__content p {
     color: var(--color-gray-600);
-    font-size: 1.0625rem;
+    font-size: 0.9375rem;
 }
 
 .payment-info {

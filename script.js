@@ -319,11 +319,75 @@ if ('loading' in HTMLImageElement.prototype) {
 }
 
 // ==========================================
+// TOGGLE "VOIR PLUS" SERVICES
+// ==========================================
+const toggleServicesBtn = document.getElementById('toggleServices');
+const servicesGridFull = document.querySelector('.services__grid--full');
+
+if (toggleServicesBtn && servicesGridFull) {
+    toggleServicesBtn.addEventListener('click', () => {
+        const isHidden = servicesGridFull.style.display === 'none' || !servicesGridFull.style.display;
+        const toggleText = toggleServicesBtn.querySelector('.toggle-text');
+        const chevronDown = toggleServicesBtn.querySelector('.chevron-down');
+        const chevronUp = toggleServicesBtn.querySelector('.chevron-up');
+
+        if (isHidden) {
+            servicesGridFull.style.display = 'grid';
+            toggleText.textContent = 'Voir moins de services';
+            chevronDown.style.display = 'none';
+            chevronUp.style.display = 'block';
+
+            // Scroll smooth vers les nouveaux services
+            setTimeout(() => {
+                servicesGridFull.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }, 100);
+        } else {
+            servicesGridFull.style.display = 'none';
+            toggleText.textContent = 'Voir les 3 autres services';
+            chevronDown.style.display = 'block';
+            chevronUp.style.display = 'none';
+        }
+    });
+}
+
+// ==========================================
+// TOGGLE "VOIR PLUS" PROJETS
+// ==========================================
+const toggleProjectsBtn = document.getElementById('toggleProjects');
+const projectsGridFull = document.querySelector('.projects__grid--full');
+
+if (toggleProjectsBtn && projectsGridFull) {
+    toggleProjectsBtn.addEventListener('click', () => {
+        const isHidden = projectsGridFull.style.display === 'none' || !projectsGridFull.style.display;
+        const toggleText = toggleProjectsBtn.querySelector('.toggle-text');
+        const chevronDown = toggleProjectsBtn.querySelector('.chevron-down');
+        const chevronUp = toggleProjectsBtn.querySelector('.chevron-up');
+
+        if (isHidden) {
+            projectsGridFull.style.display = 'grid';
+            toggleText.textContent = 'Voir moins de projets';
+            chevronDown.style.display = 'none';
+            chevronUp.style.display = 'block';
+
+            // Scroll smooth vers les nouveaux projets
+            setTimeout(() => {
+                projectsGridFull.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }, 100);
+        } else {
+            projectsGridFull.style.display = 'none';
+            toggleText.textContent = 'Voir les 3 autres projets';
+            chevronDown.style.display = 'block';
+            chevronUp.style.display = 'none';
+        }
+    });
+}
+
+// ==========================================
 // CONSOLE MESSAGE
 // ==========================================
-console.log('%c🚀 Site développé par TRIDEV', 'color: #9DD33A; font-size: 18px; font-weight: bold;');
+console.log('%c🚀 Site développé par IATEK', 'color: #9DD33A; font-size: 18px; font-weight: bold;');
 console.log('%c💼 Besoin de services de développement?', 'color: #153B66; font-size: 14px;');
-console.log('%c📧 contact@tridev.com', 'color: #3A3A3A; font-size: 14px;');
+console.log('%c📧 contact@iatek.com', 'color: #3A3A3A; font-size: 14px;');
 
 // ==========================================
 // EASTER EGG - Konami Code

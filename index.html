@@ -140,7 +140,8 @@
                 <p class="section-subtitle">De la création à la croissance, nous couvrons tous vos besoins digitaux avec expertise</p>
             </div>
             
-            <div class="services__grid">
+            <!-- Affichage réduit : 3 services principaux -->
+            <div class="services__grid services__grid--preview">
                 <!-- PILIER 1: Web & Plateformes -->
                 <div class="service-card service-card--featured">
                     <div class="service-card__image">
@@ -222,7 +223,10 @@
                         </ul>
                     </div>
                 </div>
+            </div>
 
+            <!-- Services cachés par défaut -->
+            <div class="services__grid services__grid--full" style="display: none;">
                 <!-- PILIER 4: Cybersécurité -->
                 <div class="service-card">
                     <div class="service-card__image">
@@ -308,6 +312,19 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Bouton "Voir plus" pour services -->
+            <div class="services__more">
+                <button class="btn btn--secondary btn--large" id="toggleServices">
+                    <span class="toggle-text">Voir les 3 autres services</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="chevron-down">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="chevron-up" style="display: none;">
+                        <polyline points="18 15 12 9 6 15"></polyline>
+                    </svg>
+                </button>
+            </div>
         </div>
     </section>
 
@@ -334,11 +351,8 @@
 
                     <ul class="pricing-features">
                         <li><strong>Site vitrine</strong> 5 pages responsive</li>
-                        <li>Design moderne & professionnel</li>
-                        <li>Optimisation SEO de base</li>
-                        <li>Formulaire de contact</li>
-                        <li>Hébergement 1 an inclus</li>
-                        <li>Support 3 mois</li>
+                        <li>SEO de base + Formulaire contact</li>
+                        <li>Hébergement 1 an + Support 3 mois</li>
                     </ul>
 
                     <a href="#contact" class="btn btn--secondary btn--full">Demander un devis</a>
@@ -357,13 +371,10 @@
                     <p class="pricing-card__description">Pour entreprises en croissance</p>
 
                     <ul class="pricing-features">
-                        <li><strong>Site web complet</strong> ou E-commerce</li>
-                        <li>Design sur mesure premium</li>
-                        <li>Intégration paiement (Wave, OM)</li>
-                        <li>Dashboard admin complet</li>
+                        <li><strong>Site complet</strong> ou E-commerce premium</li>
+                        <li>Paiement Wave/OM + Dashboard admin</li>
                         <li>SEO avancé + Analytics</li>
-                        <li>Formation équipe incluse</li>
-                        <li>Support 6 mois prioritaire</li>
+                        <li>Formation + Support 6 mois prioritaire</li>
                     </ul>
 
                     <a href="#contact" class="btn btn--primary btn--full">Commencer maintenant</a>
@@ -381,12 +392,9 @@
                     <p class="pricing-card__description">Solutions complexes & startups</p>
 
                     <ul class="pricing-features">
-                        <li><strong>Plateforme complexe</strong> SAAS/MVP</li>
-                        <li>Architecture scalable</li>
-                        <li>IA & Automatisation intégrée</li>
-                        <li>Sécurité renforcée</li>
-                        <li>API & intégrations tierces</li>
-                        <li>Accompagnement stratégique</li>
+                        <li><strong>Plateforme</strong> SAAS/MVP scalable</li>
+                        <li>IA & Automatisation + Sécurité</li>
+                        <li>API & intégrations + Accompagnement</li>
                         <li>Support 12 mois dédié</li>
                     </ul>
 
@@ -464,7 +472,8 @@
                 <p class="section-subtitle">Découvrez comment nous avons aidé nos clients à atteindre leurs objectifs</p>
             </div>
 
-            <div class="projects__grid">
+            <!-- Affichage réduit : 3 projets principaux -->
+            <div class="projects__grid projects__grid--preview">
                 <!-- Projet 1 -->
                 <article class="project-card project-card--featured">
                     <div class="project-card__image">
@@ -581,7 +590,10 @@
                         </div>
                     </div>
                 </article>
+            </div>
 
+            <!-- Projets cachés par défaut -->
+            <div class="projects__grid projects__grid--full" style="display: none;">
                 <!-- Projet 4 -->
                 <article class="project-card">
                     <div class="project-card__image">
@@ -698,6 +710,19 @@
                         </div>
                     </div>
                 </article>
+            </div>
+
+            <!-- Bouton "Voir plus" pour projets -->
+            <div class="projects__more">
+                <button class="btn btn--secondary btn--large" id="toggleProjects">
+                    <span class="toggle-text">Voir les 3 autres projets</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="chevron-down">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="chevron-up" style="display: none;">
+                        <polyline points="18 15 12 9 6 15"></polyline>
+                    </svg>
+                </button>
             </div>
 
             <div class="projects__cta">
