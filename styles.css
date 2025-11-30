@@ -2400,32 +2400,98 @@ select.form__input {
 }
 
 @media (max-width: 768px) {
-    /* Navigation mobile */
+    /* Navigation mobile - Améliorée */
     .nav {
         position: fixed;
-        top: 65px;
-        left: 0;
-        width: 100%;
-        background: rgba(255, 255, 255, 0.98);
-        backdrop-filter: blur(var(--blur-lg));
-        padding: var(--spacing-lg);
-        transform: translateX(-100%);
-        transition: transform 0.3s ease;
-        box-shadow: var(--shadow-xl);
+        top: 0;
+        right: 0;
+        width: 280px;
+        height: 100vh;
+        background: var(--gradient-primary);
+        padding: calc(70px + var(--spacing-lg)) var(--spacing-lg) var(--spacing-lg);
+        transform: translateX(100%);
+        transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow: -4px 0 24px rgba(0, 0, 0, 0.3);
+        z-index: 999;
+        overflow-y: auto;
     }
 
     .nav.active {
         transform: translateX(0);
     }
 
+    /* Overlay dark quand menu ouvert */
+    .nav.active::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 280px;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(2px);
+        z-index: -1;
+    }
+
     .nav__list {
         flex-direction: column;
-        gap: var(--spacing-md);
-        align-items: flex-start;
+        gap: 0;
+        align-items: stretch;
+    }
+
+    .nav__item {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .nav__link {
+        color: var(--color-white);
+        padding: 1rem 0;
+        display: block;
+        font-size: 1.0625rem;
+        border-radius: 0;
+    }
+
+    .nav__link::before,
+    .nav__link::after {
+        display: none;
+    }
+
+    .nav__link:hover {
+        color: var(--color-accent);
+        background: rgba(255, 255, 255, 0.05);
+        padding-left: 1rem;
+    }
+
+    .nav__link--cta {
+        background: var(--gradient-accent);
+        color: var(--color-white);
+        margin-top: var(--spacing-md);
+        padding: 1rem;
+        border-radius: var(--radius-lg);
+        text-align: center;
+    }
+
+    .nav__link--cta:hover {
+        padding-left: 1rem;
+        transform: scale(1.02);
     }
 
     .hamburger {
         display: flex;
+        z-index: 1001;
+        position: relative;
+    }
+
+    .hamburger.active .hamburger__line:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+    }
+
+    .hamburger.active .hamburger__line:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .hamburger__line:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
     }
 
     .services__grid,
@@ -2479,15 +2545,155 @@ select.form__input {
     .additional-services__grid {
         grid-template-columns: 1fr;
     }
-}
 
-@media (max-width: 480px) {
+    /* Réduction espacements mobile */
+    .hero,
+    .services,
+    .pricing-section,
+    .projects,
+    .process,
+    .about,
+    .partners,
+    .testimonials,
+    .problems-section,
+    .contact {
+        padding: var(--spacing-xxl) 0;
+    }
+
+    .section-header {
+        margin-bottom: var(--spacing-xl);
+    }
+
+    /* Hero mobile optimisé */
+    .hero__badge {
+        font-size: 0.75rem;
+        padding: 0.5rem 1rem;
+        margin-bottom: var(--spacing-md);
+    }
+
     .hero__title {
+        font-size: 1.875rem;
+        margin-bottom: var(--spacing-md);
+        line-height: 1.15;
+    }
+
+    .hero__subtitle {
+        font-size: 1rem;
+        margin-bottom: var(--spacing-md);
+    }
+
+    .hero__value-props {
+        gap: 0.5rem;
+        margin-bottom: var(--spacing-md);
+    }
+
+    .value-prop {
+        font-size: 0.8125rem;
+        padding: 0.5rem 0.875rem;
+    }
+
+    .value-prop svg {
+        width: 16px;
+        height: 16px;
+    }
+
+    /* Section headers mobile */
+    .section-title {
+        font-size: 1.75rem;
+        margin-bottom: var(--spacing-sm);
+    }
+
+    .section-subtitle {
+        font-size: 0.9375rem;
+    }
+
+    .section-tag {
+        font-size: 0.75rem;
+        padding: 0.375rem 1rem;
+        margin-bottom: var(--spacing-sm);
+    }
+
+    /* Cards mobile compactes */
+    .service-card,
+    .project-card,
+    .pricing-card {
+        padding: var(--spacing-lg);
+    }
+
+    .service-card__image,
+    .project-card__image {
+        height: 160px;
+    }
+
+    .service-card__title,
+    .project-card__title {
+        font-size: 1.25rem;
+    }
+
+    .service-card__description,
+    .project-card__description {
+        font-size: 0.875rem;
+        margin-bottom: var(--spacing-sm);
+    }
+
+    .service-card__features li,
+    .pricing-features li {
+        font-size: 0.875rem;
+        padding: 0.5rem 0;
+    }
+
+    /* Pricing mobile */
+    .price-amount {
+        font-size: 2.5rem;
+    }
+
+    .price-currency {
+        font-size: 1rem;
+    }
+
+    .pricing-card__title {
+        font-size: 1.5rem;
+    }
+
+    .additional-services {
+        padding: var(--spacing-lg);
+    }
+
+    .additional-services__title {
+        font-size: 1.5rem;
+        margin-bottom: var(--spacing-lg);
+    }
+
+    .addon-service {
+        padding: var(--spacing-md);
+    }
+
+    .addon-icon {
         font-size: 2rem;
     }
 
-    .section-title {
-        font-size: 1.875rem;
+    /* Problems section mobile */
+    .problem-card {
+        padding: var(--spacing-lg);
+    }
+
+    .problem-icon {
+        font-size: 2rem;
+        margin-bottom: var(--spacing-sm);
+    }
+
+    .problem-card h3 {
+        font-size: 1rem;
+    }
+
+    .problem-card p {
+        font-size: 0.875rem;
+    }
+
+    /* Buttons mobile */
+    .btn {
+        padding: 0.875rem 1.5rem;
+        font-size: 0.9375rem;
     }
 
     .btn--large {
@@ -2495,8 +2701,97 @@ select.form__input {
         font-size: 1rem;
     }
 
+    /* Process mobile */
+    .process-step {
+        padding: var(--spacing-lg);
+    }
+
+    .process-step__number {
+        font-size: 3rem;
+        margin-bottom: var(--spacing-sm);
+    }
+
+    .process-step__title {
+        font-size: 1.25rem;
+    }
+
+    /* Testimonials mobile */
+    .testimonial-card {
+        padding: var(--spacing-lg);
+    }
+
+    .testimonial-card__text {
+        font-size: 0.9375rem;
+        margin-bottom: var(--spacing-md);
+    }
+
+    /* CTA boxes mobile */
+    .cta-box,
+    .pricing-cta {
+        padding: var(--spacing-lg);
+    }
+
+    .cta-box__title,
+    .pricing-cta__content h3 {
+        font-size: 1.5rem;
+    }
+
+    .cta-box__text,
+    .pricing-cta__content p {
+        font-size: 0.9375rem;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Espacements ultra-compacts */
+    .container {
+        padding: 0 1rem;
+    }
+
+    .hero,
+    .services,
+    .pricing-section,
+    .projects,
+    .process,
+    .about,
+    .partners,
+    .testimonials,
+    .problems-section,
+    .contact {
+        padding: var(--spacing-lg) 0;
+    }
+
+    /* Hero ultra-compact */
+    .hero__badge {
+        font-size: 0.6875rem;
+        padding: 0.375rem 0.75rem;
+    }
+
+    .hero__title {
+        font-size: 1.625rem;
+        margin-bottom: var(--spacing-sm);
+    }
+
+    .hero__subtitle {
+        font-size: 0.9375rem;
+        margin-bottom: var(--spacing-sm);
+    }
+
+    .hero__value-props {
+        flex-direction: column;
+        gap: 0.375rem;
+        margin-bottom: var(--spacing-sm);
+    }
+
+    .value-prop {
+        font-size: 0.75rem;
+        padding: 0.375rem 0.75rem;
+        width: 100%;
+    }
+
     .hero__cta {
         flex-direction: column;
+        gap: 0.75rem;
     }
 
     .hero__cta .btn {
@@ -2504,15 +2799,269 @@ select.form__input {
         justify-content: center;
     }
 
-    .contact__form-section {
-        padding: var(--spacing-lg);
+    /* Section headers très compacts */
+    .section-header {
+        margin-bottom: var(--spacing-lg);
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .section-subtitle {
+        font-size: 0.875rem;
+    }
+
+    .section-tag {
+        font-size: 0.6875rem;
+        padding: 0.25rem 0.75rem;
+    }
+
+    /* Cards très compactes */
+    .service-card,
+    .project-card,
+    .pricing-card,
+    .testimonial-card,
+    .problem-card {
+        padding: 1rem;
+    }
+
+    .service-card__image,
+    .project-card__image {
+        height: 140px;
+    }
+
+    .service-card__title,
+    .project-card__title {
+        font-size: 1.125rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .service-card__description,
+    .project-card__description {
+        font-size: 0.8125rem;
+    }
+
+    .service-card__icon,
+    .service-card__features {
+        margin-bottom: var(--spacing-sm);
+    }
+
+    .service-card__icon {
+        width: 48px;
+        height: 48px;
+    }
+
+    .service-card__icon svg {
+        width: 24px;
+        height: 24px;
+    }
+
+    .service-card__features li {
+        font-size: 0.8125rem;
+        padding: 0.375rem 0;
+    }
+
+    /* Pricing très compact */
+    .price-amount {
+        font-size: 2.25rem;
+    }
+
+    .pricing-card__title {
+        font-size: 1.375rem;
+    }
+
+    .pricing-card__badge {
+        font-size: 0.75rem;
+        padding: 0.375rem 0.75rem;
+    }
+
+    .pricing-features li {
+        font-size: 0.8125rem;
+        padding: 0.375rem 0;
+    }
+
+    .pricing-note {
+        font-size: 0.8125rem;
+    }
+
+    /* Additional services compact */
+    .additional-services {
+        padding: 1rem;
+    }
+
+    .additional-services__title {
+        font-size: 1.375rem;
+        margin-bottom: var(--spacing-md);
+    }
+
+    .addon-service {
+        padding: 1rem;
+    }
+
+    .addon-icon {
+        font-size: 1.75rem;
+        margin-bottom: 0.375rem;
+    }
+
+    .addon-service h4 {
+        font-size: 1rem;
+        margin-bottom: 0.25rem;
+    }
+
+    .addon-price {
+        font-size: 0.9375rem;
+    }
+
+    .addon-desc {
+        font-size: 0.8125rem;
+    }
+
+    /* Problems ultra-compact */
+    .problem-card {
+        padding: 1rem;
+    }
+
+    .problem-icon {
+        font-size: 1.75rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .problem-card h3 {
+        font-size: 0.9375rem;
+        margin-bottom: 0.375rem;
+    }
+
+    .problem-card p {
+        font-size: 0.8125rem;
+    }
+
+    /* Buttons compacts */
+    .btn {
+        padding: 0.75rem 1.25rem;
+        font-size: 0.875rem;
+    }
+
+    .btn--large {
+        padding: 0.875rem 1.5rem;
+        font-size: 0.9375rem;
+    }
+
+    /* Process compact */
+    .process-step {
+        padding: 1rem;
+    }
+
+    .process-step__number {
+        font-size: 2.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .process-step__title {
+        font-size: 1.125rem;
+        margin-bottom: 0.375rem;
+    }
+
+    .process-step__description {
+        font-size: 0.875rem;
+    }
+
+    /* CTA boxes compact */
+    .cta-box,
+    .pricing-cta {
+        padding: 1rem;
+    }
+
+    .cta-box__title,
+    .pricing-cta__content h3 {
+        font-size: 1.25rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .cta-box__text,
+    .pricing-cta__content p {
+        font-size: 0.875rem;
     }
 
     .partners__cta-title {
-        font-size: 1.75rem;
+        font-size: 1.5rem;
     }
 
-    .cta-box {
-        padding: var(--spacing-xl);
+    /* Contact form compact */
+    .contact__form-section {
+        padding: 1rem;
+    }
+
+    .contact__form-header h3 {
+        font-size: 1.375rem;
+    }
+
+    .contact__form-header p {
+        font-size: 0.875rem;
+    }
+
+    .form__label {
+        font-size: 0.8125rem;
+    }
+
+    .form__input,
+    .form__textarea {
+        padding: 0.75rem;
+        font-size: 0.875rem;
+    }
+
+    /* Partner stats compact */
+    .partner-stat__number {
+        font-size: 3rem;
+    }
+
+    .partner-stat__label {
+        font-size: 1rem;
+    }
+
+    /* Testimonials compact */
+    .testimonial-card__text {
+        font-size: 0.875rem;
+    }
+
+    .testimonial-card__name {
+        font-size: 1rem;
+    }
+
+    .testimonial-card__position {
+        font-size: 0.8125rem;
+    }
+
+    /* Projects meta compact */
+    .project-stat__value {
+        font-size: 1rem;
+    }
+
+    .project-stat__label {
+        font-size: 0.6875rem;
+    }
+
+    .project-card__link {
+        font-size: 0.8125rem;
+    }
+
+    /* Footer compact */
+    .footer {
+        padding: var(--spacing-lg) 0;
+    }
+
+    .footer__heading {
+        font-size: 0.8125rem;
+        margin-bottom: var(--spacing-sm);
+    }
+
+    .footer__list a,
+    .footer__list li {
+        font-size: 0.75rem;
+    }
+
+    .footer__tagline {
+        font-size: 0.8125rem;
     }
 }
