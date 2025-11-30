@@ -25,10 +25,10 @@
                     <ul class="nav__list">
                         <li class="nav__item"><a href="#accueil" class="nav__link">Accueil</a></li>
                         <li class="nav__item"><a href="#services" class="nav__link">Services</a></li>
+                        <li class="nav__item"><a href="#tarifs" class="nav__link">Tarifs</a></li>
                         <li class="nav__item"><a href="#projets" class="nav__link">Projets</a></li>
-                        <li class="nav__item"><a href="#partenaires" class="nav__link">Partenaires</a></li>
                         <li class="nav__item"><a href="#apropos" class="nav__link">À propos</a></li>
-                        <li class="nav__item"><a href="#contact" class="nav__link nav__link--cta">Démarrer un projet</a></li>
+                        <li class="nav__item"><a href="#contact" class="nav__link nav__link--cta">Contact</a></li>
                     </ul>
                 </nav>
 
@@ -50,25 +50,82 @@
         <div class="container">
             <div class="hero__wrapper">
                 <div class="hero__content">
-                    <div class="hero__badge">Conseil technologique haut de gamme — Dakar • Canada.</div>
-                    <h1 class="hero__title">Transformez vos idées en <span class="highlight">solutions digitales</span> performantes</h1>
-                    <p class="hero__subtitle">Nous créons des sites web exceptionnels, développons des startups et sécurisons vos systèmes. Du concept au lancement, nous sommes votre partenaire technologique.</p>
+                    <div class="hero__badge">🇸🇳 Innovation Africaine • Qualité Internationale • Dakar ↔ Montréal</div>
+                    <h1 class="hero__title">Digitalisez votre entreprise, <span class="highlight">dominez votre marché</span></h1>
+                    <p class="hero__subtitle">Nous aidons les entreprises africaines à devenir modernes, efficaces et compétitives grâce au digital, l'automatisation IA et des solutions sur mesure. De Dakar vers le monde entier.</p>
+
+                    <!-- Value Props rapides -->
+                    <div class="hero__value-props">
+                        <div class="value-prop">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span>Prix adaptés au Sénégal</span>
+                        </div>
+                        <div class="value-prop">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span>Expertise IA & Automatisation</span>
+                        </div>
+                        <div class="value-prop">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span>Livraison rapide & Support 24/7</span>
+                        </div>
+                    </div>
+
                     <div class="hero__cta">
-                        <a href="#contact" class="btn btn--primary btn--large">
-                            <span>Démarrer votre projet</span>
+                        <a href="#tarifs" class="btn btn--primary btn--large">
+                            <span>Voir nos tarifs</span>
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <line x1="5" y1="12" x2="19" y2="12"></line>
                                 <polyline points="12 5 19 12 12 19"></polyline>
                             </svg>
                         </a>
-                        <a href="#projets" class="btn btn--secondary btn--large">Voir nos réalisations</a>
+                        <a href="#contact" class="btn btn--secondary btn--large">Consultation gratuite</a>
                     </div>
                 </div>
                 <div class="hero__visual">
-                    
+
                     <div class="hero__image-placeholder">
-                        <img src="images/iat1.png" alt="TRIDEV Logo" class="logo">
+                        <img src="images/iat1.png" alt="IATEK Logo" class="logo">
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problèmes Section - Montrer qu'on comprend leurs défis -->
+    <section class="problems-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Vos défis, nos solutions</span>
+                <h2 class="section-title">Les obstacles qui freinent votre croissance</h2>
+                <p class="section-subtitle">Vous n'êtes pas seul : 80% des entreprises sénégalaises rencontrent ces problèmes</p>
+            </div>
+
+            <div class="problems-grid">
+                <div class="problem-card">
+                    <div class="problem-icon">⚠️</div>
+                    <h3>Pas de site web ou site obsolète</h3>
+                    <p>Vous perdez des clients qui recherchent vos services en ligne</p>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">📊</div>
+                    <h3>Tâches manuelles chronophages</h3>
+                    <p>Votre équipe perd du temps sur des tâches répétitives</p>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">🔒</div>
+                    <h3>Données non sécurisées</h3>
+                    <p>Vos informations sensibles sont vulnérables aux cyberattaques</p>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">💡</div>
+                    <h3>Belle idée, pas de MVP</h3>
+                    <p>Votre startup reste un projet sur papier faute de développeur</p>
                 </div>
             </div>
         </div>
@@ -78,44 +135,99 @@
     <section class="services" id="services">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">Nos expertises</span>
-                <h2 class="section-title">Des services complets pour votre réussite digitale</h2>
-                <p class="section-subtitle">De la conception à la maintenance, nous couvrons tous vos besoins technologiques</p>
+                <span class="section-tag">Nos 6 piliers de services</span>
+                <h2 class="section-title">Solutions complètes pour digitaliser votre entreprise</h2>
+                <p class="section-subtitle">De la création à la croissance, nous couvrons tous vos besoins digitaux avec expertise</p>
             </div>
             
             <div class="services__grid">
-                <!-- Service 1: Création de sites web -->
+                <!-- PILIER 1: Web & Plateformes -->
                 <div class="service-card service-card--featured">
                     <div class="service-card__image">
-                        
                         <div class="service-image-placeholder">
-                            <img src="images/iat1.png" alt="Web" class="logo">
+                            <img src="images/iat1.png" alt="Web & Plateformes" class="logo">
                         </div>
                     </div>
                     <div class="service-card__content">
                         <div class="service-card__icon">
                             <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
-                                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                <line x1="8" y1="21" x2="16" y2="21"></line>
+                                <line x1="12" y1="17" x2="12" y2="21"></line>
                             </svg>
                         </div>
-                        <h3 class="service-card__title">Création de Sites Web</h3>
-                        <p class="service-card__description">Sites vitrines, e-commerce, plateformes sur mesure. Nous concevons des expériences web modernes, rapides et optimisées pour convertir vos visiteurs en clients.</p>
+                        <h3 class="service-card__title">1. Web & Plateformes</h3>
+                        <p class="service-card__description">Sites web professionnels, e-commerce, plateformes complexes (réservation, livraison, SAAS). Rapides, sécurisés et adaptés au contexte africain.</p>
                         <ul class="service-card__features">
-                            <li> Design responsive & moderne</li>
-                            <li> SEO optimisé</li>
-                            <li> Performance maximale</li>
-                            <li> Maintenance incluse</li>
+                            <li>Sites vitrines modernes & responsives</li>
+                            <li>E-commerce avec paiement local (Wave, Orange Money)</li>
+                            <li>Plateformes de réservation & gestion</li>
+                            <li>Applications SAAS sur mesure</li>
                         </ul>
                     </div>
                 </div>
 
-                <!-- Service 2: Cybersécurité -->
+                <!-- PILIER 2: Digitalisation & Organisation -->
                 <div class="service-card">
                     <div class="service-card__image">
-                        
                         <div class="service-image-placeholder">
-                            <img src="images/iat2.jpg" alt="Cybersécurité" class="logo">
+                            <img src="images/iat2.jpg" alt="Digitalisation" class="logo">
+                        </div>
+                    </div>
+                    <div class="service-card__content">
+                        <div class="service-card__icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                <polyline points="14 2 14 8 20 8"></polyline>
+                                <line x1="12" y1="18" x2="12" y2="12"></line>
+                                <line x1="9" y1="15" x2="15" y2="15"></line>
+                            </svg>
+                        </div>
+                        <h3 class="service-card__title">2. Digitalisation & Organisation</h3>
+                        <p class="service-card__description">Modernisez votre entreprise : audit digital, systèmes de gestion (CRM, ERP), automatisation des processus répétitifs.</p>
+                        <ul class="service-card__features">
+                            <li>Audit digital complet</li>
+                            <li>Mise en place CRM/ERP adaptés</li>
+                            <li>Automatisation des tâches</li>
+                            <li>Gestion documentaire & workflows</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- PILIER 3: IA & Automatisation -->
+                <div class="service-card">
+                    <div class="service-card__image">
+                        <div class="service-image-placeholder">
+                            <img src="images/iat4.png" alt="IA & Automatisation" class="logo">
+                        </div>
+                    </div>
+                    <div class="service-card__content">
+                        <div class="service-card__icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                                <polyline points="7.5 4.21 12 6.81 16.5 4.21"></polyline>
+                                <polyline points="7.5 19.79 7.5 14.6 3 12"></polyline>
+                                <polyline points="21 12 16.5 14.6 16.5 19.79"></polyline>
+                                <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                                <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                            </svg>
+                        </div>
+                        <h3 class="service-card__title">3. IA & Automatisation</h3>
+                        <p class="service-card__description">Intelligence artificielle pour automatiser RH, finance, support client. Gagnez 40% de temps sur les tâches répétitives.</p>
+                        <ul class="service-card__features">
+                            <li>Chatbots IA multilingues (FR/Wolof)</li>
+                            <li>Automatisation RH & Finance</li>
+                            <li>Génération rapports automatiques</li>
+                            <li>IA pour optimisation des ventes</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- PILIER 4: Cybersécurité -->
+                <div class="service-card">
+                    <div class="service-card__image">
+                        <div class="service-image-placeholder">
+                            <img src="images/iat3.jpg" alt="Cybersécurité" class="logo">
                         </div>
                     </div>
                     <div class="service-card__content">
@@ -124,23 +236,52 @@
                                 <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
                             </svg>
                         </div>
-                        <h3 class="service-card__title">Cybersécurité</h3>
-                        <p class="service-card__description">Protégez vos données et vos systèmes. Audits de sécurité, tests d'intrusion, mise en conformité et surveillance continue.</p>
+                        <h3 class="service-card__title">4. Cybersécurité</h3>
+                        <p class="service-card__description">Protégez vos données critiques. Audits de sécurité, tests d'intrusion, sensibilisation équipe, protection continue.</p>
                         <ul class="service-card__features">
-                            <li> Audit de sécurité</li>
-                            <li> Tests d'intrusion</li>
-                            <li> Conformité RGPD</li>
-                            <li> Monitoring 24/7</li>
+                            <li>Audit de sécurité complet</li>
+                            <li>Mise en place solutions de protection</li>
+                            <li>Formation & sensibilisation équipes</li>
+                            <li>Protection données & conformité</li>
                         </ul>
                     </div>
                 </div>
 
-                <!-- Service 3: Accompagnement Startups -->
+                <!-- PILIER 5: Branding Digital -->
                 <div class="service-card">
                     <div class="service-card__image">
-                        
                         <div class="service-image-placeholder">
-                            <img src="images/iat3.jpg" alt="Startups" class="logo">
+                            <img src="images/iat5.jpeg" alt="Branding Digital" class="logo">
+                        </div>
+                    </div>
+                    <div class="service-card__content">
+                        <div class="service-card__icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <line x1="14.31" y1="8" x2="20.05" y2="17.94"></line>
+                                <line x1="9.69" y1="8" x2="21.17" y2="8"></line>
+                                <line x1="7.38" y1="12" x2="13.12" y2="2.06"></line>
+                                <line x1="9.69" y1="16" x2="3.95" y2="6.06"></line>
+                                <line x1="14.31" y1="16" x2="2.83" y2="16"></line>
+                                <line x1="16.62" y1="12" x2="10.88" y2="21.94"></line>
+                            </svg>
+                        </div>
+                        <h3 class="service-card__title">5. Branding Digital</h3>
+                        <p class="service-card__description">Identité visuelle forte, positionnement clair, stratégie digitale gagnante. Démarquez-vous de la concurrence.</p>
+                        <ul class="service-card__features">
+                            <li>Identité visuelle complète (logo, charte)</li>
+                            <li>Positionnement & stratégie de marque</li>
+                            <li>Stratégie digitale sur mesure</li>
+                            <li>Community management (option)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- PILIER 6: Accompagnement Startups -->
+                <div class="service-card">
+                    <div class="service-card__image">
+                        <div class="service-image-placeholder">
+                            <img src="images/iat6.jpg" alt="Startups" class="logo">
                         </div>
                     </div>
                     <div class="service-card__content">
@@ -156,93 +297,160 @@
                                 <line x1="16.24" y1="7.76" x2="19.07" y2="4.93"></line>
                             </svg>
                         </div>
-                        <h3 class="service-card__title">Création & Accompagnement de Startups</h3>
-                        <p class="service-card__description">Du MVP au produit final, nous transformons votre vision en startup viable. Stratégie, développement, croissance.</p>
+                        <h3 class="service-card__title">6. Accompagnement Startups</h3>
+                        <p class="service-card__description">De l'idée au MVP en 4-8 semaines. Business model, développement, pitch deck, roadmap de croissance.</p>
                         <ul class="service-card__features">
-                            <li> MVP rapide</li>
-                            <li> Stack technique adaptée</li>
-                            <li> Conseil stratégique</li>
-                            <li> Scaling & croissance</li>
+                            <li>Conception MVP rapide (4-8 semaines)</li>
+                            <li>Validation du business model</li>
+                            <li>Roadmap technologique</li>
+                            <li>Pitch deck pour investisseurs</li>
                         </ul>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tarification Section - Prix transparents adaptés au Sénégal -->
+    <section class="pricing-section" id="tarifs">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Tarifs transparents</span>
+                <h2 class="section-title">Des prix adaptés au marché sénégalais</h2>
+                <p class="section-subtitle">Pas de frais cachés. Paiement en FCFA. Options flexibles selon votre budget.</p>
+            </div>
+
+            <!-- Pricing Grid -->
+            <div class="pricing-grid">
+                <!-- Pack Starter -->
+                <div class="pricing-card">
+                    <div class="pricing-card__badge">Démarrage</div>
+                    <h3 class="pricing-card__title">Pack Starter</h3>
+                    <div class="pricing-card__price">
+                        <span class="price-amount">200K</span>
+                        <span class="price-currency">FCFA</span>
+                    </div>
+                    <p class="pricing-card__description">Idéal pour PME qui démarre</p>
+
+                    <ul class="pricing-features">
+                        <li><strong>Site vitrine</strong> 5 pages responsive</li>
+                        <li>Design moderne & professionnel</li>
+                        <li>Optimisation SEO de base</li>
+                        <li>Formulaire de contact</li>
+                        <li>Hébergement 1 an inclus</li>
+                        <li>Support 3 mois</li>
+                    </ul>
+
+                    <a href="#contact" class="btn btn--secondary btn--full">Demander un devis</a>
+
+                    <div class="pricing-note">Livraison : 2-3 semaines</div>
                 </div>
 
-                <!-- Service 4: Solutions IA -->
-                <div class="service-card">
-                    <div class="service-card__image">
-                        
-                        <div class="service-image-placeholder">
-                            <img src="images/iat4.png" alt="IA" class="logo">
-                        </div>
+                <!-- Pack Business - POPULAIRE -->
+                <div class="pricing-card pricing-card--featured">
+                    <div class="pricing-card__badge pricing-card__badge--popular">Le plus populaire</div>
+                    <h3 class="pricing-card__title">Pack Business</h3>
+                    <div class="pricing-card__price">
+                        <span class="price-amount">600K</span>
+                        <span class="price-currency">FCFA</span>
                     </div>
-                    <div class="service-card__content">
-                        <div class="service-card__icon">
-                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
-                                <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
-                                <line x1="12" y1="22.08" x2="12" y2="12"></line>
-                            </svg>
-                        </div>
-                        <h3 class="service-card__title">Solutions IA & Automatisation</h3>
-                        <p class="service-card__description">Intelligence artificielle et automatisation pour optimiser vos processus métier et gagner en efficacité.</p>
-                        <ul class="service-card__features">
-                            <li> Chatbots intelligents</li>
-                            <li> Analyse de données</li>
-                            <li> Automatisation RPA</li>
-                            <li> Machine Learning</li>
-                        </ul>
-                    </div>
+                    <p class="pricing-card__description">Pour entreprises en croissance</p>
+
+                    <ul class="pricing-features">
+                        <li><strong>Site web complet</strong> ou E-commerce</li>
+                        <li>Design sur mesure premium</li>
+                        <li>Intégration paiement (Wave, OM)</li>
+                        <li>Dashboard admin complet</li>
+                        <li>SEO avancé + Analytics</li>
+                        <li>Formation équipe incluse</li>
+                        <li>Support 6 mois prioritaire</li>
+                    </ul>
+
+                    <a href="#contact" class="btn btn--primary btn--full">Commencer maintenant</a>
+
+                    <div class="pricing-note">Livraison : 4-6 semaines</div>
                 </div>
 
-                <!-- Service 5: Support & Maintenance -->
-                <div class="service-card">
-                    <div class="service-card__image">
-                        
-                        <div class="service-image-placeholder">
-                            <img src="images/iat5.jpeg" alt="Maintenance" class="logo">
-                        </div>
+                <!-- Pack Enterprise -->
+                <div class="pricing-card">
+                    <div class="pricing-card__badge">Sur mesure</div>
+                    <h3 class="pricing-card__title">Pack Enterprise</h3>
+                    <div class="pricing-card__price">
+                        <span class="price-amount">Sur devis</span>
                     </div>
-                    <div class="service-card__content">
-                        <div class="service-card__icon">
-                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
-                            </svg>
-                        </div>
-                        <h3 class="service-card__title">Support & Maintenance</h3>
-                        <p class="service-card__description">Gardez vos systèmes opérationnels avec notre support technique réactif et nos services de maintenance.</p>
-                        <ul class="service-card__features">
-                            <li> Support prioritaire</li>
-                            <li> Mises à jour régulières</li>
-                            <li> Monitoring proactif</li>
-                            <li> Sauvegardes automatiques</li>
-                        </ul>
-                    </div>
-                </div>
+                    <p class="pricing-card__description">Solutions complexes & startups</p>
 
-                <!-- Service 6: Consulting -->
-                <div class="service-card">
-                    <div class="service-card__image">
-                        
-                        <div class="service-image-placeholder">
-                            <img src="images/iat6.jpg" alt="Consulting" class="logo">
-                        </div>
+                    <ul class="pricing-features">
+                        <li><strong>Plateforme complexe</strong> SAAS/MVP</li>
+                        <li>Architecture scalable</li>
+                        <li>IA & Automatisation intégrée</li>
+                        <li>Sécurité renforcée</li>
+                        <li>API & intégrations tierces</li>
+                        <li>Accompagnement stratégique</li>
+                        <li>Support 12 mois dédié</li>
+                    </ul>
+
+                    <a href="#contact" class="btn btn--secondary btn--full">Discuter du projet</a>
+
+                    <div class="pricing-note">Livraison : 8-12 semaines</div>
+                </div>
+            </div>
+
+            <!-- Services Additionnels -->
+            <div class="additional-services">
+                <h3 class="additional-services__title">Services additionnels à la carte</h3>
+                <div class="additional-services__grid">
+                    <div class="addon-service">
+                        <div class="addon-icon">💬</div>
+                        <h4>Chatbot IA</h4>
+                        <p class="addon-price">250K - 500K FCFA</p>
+                        <p class="addon-desc">Support client automatisé 24/7</p>
                     </div>
-                    <div class="service-card__content">
-                        <div class="service-card__icon">
-                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path>
-                            </svg>
-                        </div>
-                        <h3 class="service-card__title">Consulting & Stratégie Digitale</h3>
-                        <p class="service-card__description">Conseils d'experts pour optimiser votre présence en ligne et atteindre vos objectifs business.</p>
-                        <ul class="service-card__features">
-                            <li> Audit digital complet</li>
-                            <li> Roadmap technologique</li>
-                            <li> Architecture système</li>
-                            <li> Formation équipes</li>
-                        </ul>
+                    <div class="addon-service">
+                        <div class="addon-icon">🔒</div>
+                        <h4>Audit Cybersécurité</h4>
+                        <p class="addon-price">400K - 800K FCFA</p>
+                        <p class="addon-desc">Analyse complète + rapport</p>
+                    </div>
+                    <div class="addon-service">
+                        <div class="addon-icon">📱</div>
+                        <h4>App Mobile</h4>
+                        <p class="addon-price">800K - 2M FCFA</p>
+                        <p class="addon-desc">iOS + Android natif</p>
+                    </div>
+                    <div class="addon-service">
+                        <div class="addon-icon">🎨</div>
+                        <h4>Branding Complet</h4>
+                        <p class="addon-price">150K - 400K FCFA</p>
+                        <p class="addon-desc">Logo + charte graphique</p>
+                    </div>
+                    <div class="addon-service">
+                        <div class="addon-icon">⚙️</div>
+                        <h4>Automatisation</h4>
+                        <p class="addon-price">300K - 1M FCFA</p>
+                        <p class="addon-desc">Process RH/Finance/Ventes</p>
+                    </div>
+                    <div class="addon-service">
+                        <div class="addon-icon">📊</div>
+                        <h4>Consulting Digital</h4>
+                        <p class="addon-price">50K - 150K/session</p>
+                        <p class="addon-desc">Stratégie & audit</p>
                     </div>
                 </div>
+            </div>
+
+            <!-- Pricing CTA -->
+            <div class="pricing-cta">
+                <div class="pricing-cta__content">
+                    <h3>Besoin d'une solution personnalisée ?</h3>
+                    <p>Parlons de votre projet. Consultation gratuite de 30 minutes pour définir vos besoins précis.</p>
+                </div>
+                <a href="#contact" class="btn btn--primary btn--large">Consultation gratuite</a>
+            </div>
+
+            <!-- Payment Options -->
+            <div class="payment-info">
+                <p><strong>💳 Paiement flexible :</strong> Wave • Orange Money • Virement bancaire • Paiement échelonné disponible</p>
             </div>
         </div>
     </section>
