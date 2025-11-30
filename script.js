@@ -32,22 +32,21 @@ if (hamburger && mainNav) {
 }
 
 // ==========================================
-// HEADER SCROLL EFFECT
+// HEADER SCROLL EFFECT - ULTRA COMPACT
 // ==========================================
 const header = document.querySelector('.header');
 let lastScroll = 0;
 
 window.addEventListener('scroll', () => {
     const currentScroll = window.pageYOffset;
-    
-    if (currentScroll > 100) {
-        header.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.1)';
-        header.style.padding = '0.5rem 0';
+
+    // Ajouter classe "scrolled" dès qu'on scroll un peu (50px)
+    if (currentScroll > 50) {
+        header.classList.add('scrolled');
     } else {
-        header.style.boxShadow = '0 1px 3px rgba(0, 0, 0, 0.08)';
-        header.style.padding = '1rem 0';
+        header.classList.remove('scrolled');
     }
-    
+
     lastScroll = currentScroll;
 });
 
