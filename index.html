@@ -97,55 +97,69 @@
         </div>
     </section>
 
-    <!-- Problèmes Section - Montrer qu'on comprend leurs défis -->
-    <section class="problems-section">
+    <!-- Section Question Teaser -->
+    <section class="problems-teaser">
         <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Vos défis, nos solutions</span>
-                <h2 class="section-title">Les obstacles qui freinent votre croissance</h2>
-                <p class="section-subtitle">Vous n'êtes pas seul : 80% des entreprises sénégalaises rencontrent ces problèmes</p>
+            <div class="teaser-card">
+                <div class="teaser-card__icon">🤔</div>
+                <h2 class="teaser-card__title">Savez-vous ce qui empêche votre entreprise de croître ?</h2>
+                <p class="teaser-card__subtitle">La plupart des entreprises ignorent les obstacles qui les freinent au quotidien</p>
+                <button class="btn btn--primary btn--large" id="showProblemsBtn">
+                    <span>Découvrir ce qui empêche ma croissance</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal Popup des Problèmes (comme une pub) -->
+    <div class="problems-modal" id="problemsModal">
+        <div class="problems-modal__overlay"></div>
+        <div class="problems-modal__content">
+            <div class="problems-modal__header">
+                <div class="problems-modal__icon">⚠️</div>
+                <h2 class="problems-modal__title">Les obstacles qui freinent votre croissance</h2>
+                <p class="problems-modal__subtitle">Vous n'êtes pas seul : 80% des entreprises sénégalaises rencontrent ces problèmes</p>
             </div>
 
-            <!-- Question interactive -->
-            <div class="problems-reveal" id="problemsReveal">
-                <div class="problems-question">
-                    <div class="problems-question__icon">🤔</div>
-                    <h3 class="problems-question__title">Savez-vous ce qui empêche réellement votre entreprise de croître ?</h3>
-                    <p class="problems-question__subtitle">La plupart des entreprises ignorent les obstacles qui les freinent au quotidien</p>
-                    <button class="btn btn--primary btn--large problems-reveal-btn" id="revealProblemsBtn">
-                        <span>Découvrir les obstacles</span>
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <polyline points="6 9 12 15 18 9"></polyline>
-                        </svg>
-                    </button>
-                </div>
-            </div>
-
-            <!-- Grille des problèmes (cachée au départ) -->
-            <div class="problems-grid" id="problemsGrid" style="display: none;">
-                <div class="problem-card">
+            <!-- Grille des problèmes dans le modal -->
+            <div class="problems-modal__grid">
+                <div class="problem-card-modal">
                     <div class="problem-icon">⚠️</div>
                     <h3>Pas de site web ou site obsolète</h3>
                     <p>Vous perdez des clients qui recherchent vos services en ligne</p>
                 </div>
-                <div class="problem-card">
+                <div class="problem-card-modal">
                     <div class="problem-icon">📊</div>
                     <h3>Tâches manuelles chronophages</h3>
                     <p>Votre équipe perd du temps sur des tâches répétitives</p>
                 </div>
-                <div class="problem-card">
+                <div class="problem-card-modal">
                     <div class="problem-icon">🔒</div>
                     <h3>Données non sécurisées</h3>
                     <p>Vos informations sensibles sont vulnérables aux cyberattaques</p>
                 </div>
-                <div class="problem-card">
+                <div class="problem-card-modal">
                     <div class="problem-icon">💡</div>
                     <h3>Belle idée, pas de MVP</h3>
                     <p>Votre startup reste un projet sur papier faute de développeur</p>
                 </div>
             </div>
+
+            <!-- Bouton CTA pour voir les solutions (remplace la croix) -->
+            <div class="problems-modal__cta">
+                <button class="btn btn--primary btn--large" id="viewSolutionsBtn">
+                    <span>Voir maintenant nos solutions</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                </button>
+            </div>
         </div>
-    </section>
+    </div>
 
     <!-- Services Section -->
     <section class="services" id="services">

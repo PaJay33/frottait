@@ -318,30 +318,54 @@ if ('loading' in HTMLImageElement.prototype) {
 }
 
 // ==========================================
-// RÉVÉLATION DES OBSTACLES (PROBLEMS SECTION)
+// MODAL POPUP DES PROBLÈMES (déclenché au clic)
 // ==========================================
-const revealProblemsBtn = document.getElementById('revealProblemsBtn');
-const problemsReveal = document.getElementById('problemsReveal');
-const problemsGrid = document.getElementById('problemsGrid');
+const problemsModal = document.getElementById('problemsModal');
+const showProblemsBtn = document.getElementById('showProblemsBtn');
+const viewSolutionsBtn = document.getElementById('viewSolutionsBtn');
+const servicesSection = document.getElementById('services');
 
-if (revealProblemsBtn && problemsReveal && problemsGrid) {
-    revealProblemsBtn.addEventListener('click', () => {
-        // Animation de disparition de la question
-        problemsReveal.style.transition = 'all 0.6s ease';
-        problemsReveal.style.opacity = '0';
-        problemsReveal.style.transform = 'scale(0.9)';
-
-        // Après l'animation, masquer la question et afficher les cards
-        setTimeout(() => {
-            problemsReveal.style.display = 'none';
-            problemsGrid.style.display = 'grid';
-
-            // Petit délai pour l'animation d'apparition
-            setTimeout(() => {
-                problemsGrid.classList.add('revealed');
-            }, 50);
-        }, 600);
+// Ouvrir le modal quand on clique sur le bouton teaser
+if (showProblemsBtn && problemsModal) {
+    showProblemsBtn.addEventListener('click', () => {
+        problemsModal.classList.add('active');
+        // Empêcher le scroll du body quand le modal est ouvert
+        document.body.style.overflow = 'hidden';
     });
+}
+
+// Bouton "Voir nos solutions" - Ferme le modal et scroll vers les services
+if (viewSolutionsBtn && problemsModal && servicesSection) {
+    viewSolutionsBtn.addEventListener('click', () => {
+        // Fermer le modal avec animation
+        problemsModal.classList.remove('active');
+
+        // Réactiver le scroll du body
+        document.body.style.overflow = '';
+
+        // Après l'animation de fermeture, scroll vers les services
+        setTimeout(() => {
+            const headerOffset = 80;
+            const elementPosition = servicesSection.offsetTop;
+            const offsetPosition = elementPosition - headerOffset;
+
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
+            });
+        }, 300);
+    });
+}
+
+// Fermer le modal en cliquant sur l'overlay (optionnel)
+if (problemsModal) {
+    const overlay = problemsModal.querySelector('.problems-modal__overlay');
+    if (overlay) {
+        overlay.addEventListener('click', () => {
+            problemsModal.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+    }
 }
 
 // ==========================================
