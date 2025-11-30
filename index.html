@@ -106,7 +106,23 @@
                 <p class="section-subtitle">Vous n'êtes pas seul : 80% des entreprises sénégalaises rencontrent ces problèmes</p>
             </div>
 
-            <div class="problems-grid">
+            <!-- Question interactive -->
+            <div class="problems-reveal" id="problemsReveal">
+                <div class="problems-question">
+                    <div class="problems-question__icon">🤔</div>
+                    <h3 class="problems-question__title">Savez-vous ce qui empêche réellement votre entreprise de croître ?</h3>
+                    <p class="problems-question__subtitle">La plupart des entreprises ignorent les obstacles qui les freinent au quotidien</p>
+                    <button class="btn btn--primary btn--large problems-reveal-btn" id="revealProblemsBtn">
+                        <span>Découvrir les obstacles</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Grille des problèmes (cachée au départ) -->
+            <div class="problems-grid" id="problemsGrid" style="display: none;">
                 <div class="problem-card">
                     <div class="problem-icon">⚠️</div>
                     <h3>Pas de site web ou site obsolète</h3>

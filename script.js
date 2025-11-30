@@ -318,6 +318,33 @@ if ('loading' in HTMLImageElement.prototype) {
 }
 
 // ==========================================
+// RÉVÉLATION DES OBSTACLES (PROBLEMS SECTION)
+// ==========================================
+const revealProblemsBtn = document.getElementById('revealProblemsBtn');
+const problemsReveal = document.getElementById('problemsReveal');
+const problemsGrid = document.getElementById('problemsGrid');
+
+if (revealProblemsBtn && problemsReveal && problemsGrid) {
+    revealProblemsBtn.addEventListener('click', () => {
+        // Animation de disparition de la question
+        problemsReveal.style.transition = 'all 0.6s ease';
+        problemsReveal.style.opacity = '0';
+        problemsReveal.style.transform = 'scale(0.9)';
+
+        // Après l'animation, masquer la question et afficher les cards
+        setTimeout(() => {
+            problemsReveal.style.display = 'none';
+            problemsGrid.style.display = 'grid';
+
+            // Petit délai pour l'animation d'apparition
+            setTimeout(() => {
+                problemsGrid.classList.add('revealed');
+            }, 50);
+        }, 600);
+    });
+}
+
+// ==========================================
 // TOGGLE "VOIR PLUS" SERVICES
 // ==========================================
 const toggleServicesBtn = document.getElementById('toggleServices');
