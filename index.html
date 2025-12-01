@@ -1051,7 +1051,8 @@
                         <h3>Envoyez-nous un message</h3>
                         <p>Remplissez le formulaire ci-dessous et nous vous répondrons sous 24h</p>
                     </div>
-                    <form class="contact-form premium-form" id="contactForm">
+                    <form class="contact-form premium-form contact-form--compact" id="contactForm">
+                        <!-- Ligne 1: Nom complet + Email (côte à côte) -->
                         <div class="form-row">
                             <div class="form__group">
                                 <label for="nom" class="form__label">
@@ -1059,62 +1060,57 @@
                                         <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
                                         <circle cx="12" cy="7" r="4"></circle>
                                     </svg>
-                                    Nom *
+                                    Nom complet *
                                 </label>
-                                <input type="text" id="nom" name="nom" class="form__input" placeholder="Votre nom" required>
+                                <input type="text" id="nom" name="nom" class="form__input" placeholder="Prénom et nom" required>
                                 <span class="form__border"></span>
                             </div>
                             <div class="form__group">
-                                <label for="prenom" class="form__label">
+                                <label for="email" class="form__label">
                                     <svg class="form__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-                                        <circle cx="12" cy="7" r="4"></circle>
+                                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                        <polyline points="22,6 12,13 2,6"></polyline>
                                     </svg>
-                                    Prénom
+                                    Email *
                                 </label>
-                                <input type="text" id="prenom" name="prenom" class="form__input" placeholder="Votre prénom">
+                                <input type="email" id="email" name="email" class="form__input" placeholder="vous@exemple.com" required>
                                 <span class="form__border"></span>
                             </div>
                         </div>
-                        <div class="form__group">
-                            <label for="email" class="form__label">
-                                <svg class="form__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                                    <polyline points="22,6 12,13 2,6"></polyline>
-                                </svg>
-                                Email *
-                            </label>
-                            <input type="email" id="email" name="email" class="form__input" placeholder="vous@exemple.com" required>
-                            <span class="form__border"></span>
+
+                        <!-- Ligne 2: Téléphone + Service (côte à côte) -->
+                        <div class="form-row">
+                            <div class="form__group">
+                                <label for="phone" class="form__label">
+                                    <svg class="form__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                    </svg>
+                                    Téléphone *
+                                </label>
+                                <input type="tel" id="phone" name="phone" class="form__input" placeholder="+221 XX XXX XX XX" required>
+                                <span class="form__border"></span>
+                            </div>
+                            <div class="form__group">
+                                <label for="service" class="form__label">
+                                    <svg class="form__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                                    </svg>
+                                    Service *
+                                </label>
+                                <select id="service" name="service" class="form__input form__select" required>
+                                    <option value="">Choisir...</option>
+                                    <option value="site-web">Site web</option>
+                                    <option value="cybersecurite">Cybersécurité</option>
+                                    <option value="startup">Startup</option>
+                                    <option value="ia">IA</option>
+                                    <option value="support">Support</option>
+                                    <option value="autre">Autre</option>
+                                </select>
+                                <span class="form__border"></span>
+                            </div>
                         </div>
-                        <div class="form__group">
-                            <label for="phone" class="form__label">
-                                <svg class="form__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-                                </svg>
-                                Téléphone
-                            </label>
-                            <input type="tel" id="phone" name="phone" class="form__input" placeholder="+221 XX XXX XX XX">
-                            <span class="form__border"></span>
-                        </div>
-                        <div class="form__group">
-                            <label for="service" class="form__label">
-                                <svg class="form__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
-                                </svg>
-                                Service souhaité *
-                            </label>
-                            <select id="service" name="service" class="form__input form__select" required>
-                                <option value="">Sélectionnez un service...</option>
-                                <option value="site-web">🌐 Création de site web</option>
-                                <option value="cybersecurite">🔒 Cybersécurité</option>
-                                <option value="startup">🚀 Accompagnement startup</option>
-                                <option value="ia">🤖 Solutions IA</option>
-                                <option value="support">⚙️ Support & Maintenance</option>
-                                <option value="autre">💡 Autre</option>
-                            </select>
-                            <span class="form__border"></span>
-                        </div>
+
+                        <!-- Ligne 3: Message (pleine largeur mais plus court) -->
                         <div class="form__group">
                             <label for="message" class="form__label">
                                 <svg class="form__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -1122,9 +1118,10 @@
                                 </svg>
                                 Votre message *
                             </label>
-                            <textarea id="message" name="message" class="form__textarea" rows="5" placeholder="Décrivez-nous votre projet..." required></textarea>
+                            <textarea id="message" name="message" class="form__textarea" rows="3" placeholder="Décrivez brièvement votre besoin..." required></textarea>
                             <span class="form__border"></span>
                         </div>
+
                         <button type="submit" class="btn btn--primary btn--large btn--full btn--premium">
                             <span class="btn__text">Envoyer le message</span>
                             <span class="btn__icon">

@@ -2238,7 +2238,7 @@ button {
 
 /* Contact Form - Premium Design */
 .contact__form-section {
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(0, 217, 255, 0.05);
     backdrop-filter: blur(var(--blur-lg));
     padding: var(--spacing-xl);
     border-radius: var(--radius-2xl);
@@ -2268,13 +2268,107 @@ button {
 .contact__form-header h3 {
     font-size: 1.75rem;
     font-weight: var(--font-bold);
-    color: var(--color-primary);
+    color: var(--color-white);
     margin-bottom: var(--spacing-xs);
 }
 
 .contact__form-header p {
-    color: var(--color-gray-600);
+    color: rgba(255, 255, 255, 0.8);
     font-size: 0.9375rem;
+    margin-bottom: var(--spacing-md);
+}
+
+/* Toggle Form Button */
+.contact-form-toggle {
+    margin: 0 auto;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-secondary) 100%);
+    border: none;
+    box-shadow: 0 4px 15px rgba(0, 217, 255, 0.3);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-form-toggle::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.contact-form-toggle:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+.contact-form-toggle:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 217, 255, 0.5),
+                0 0 40px rgba(124, 58, 237, 0.3);
+}
+
+.contact-form-toggle svg {
+    transition: transform 0.3s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.contact-form-toggle:hover .chevron-down {
+    transform: translateY(3px);
+}
+
+.contact-form-toggle:hover .chevron-up {
+    transform: translateY(-3px);
+}
+
+.toggle-form-text {
+    position: relative;
+    z-index: 1;
+}
+
+/* Form animation */
+.contact-form {
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-origin: top;
+}
+
+.contact-form.showing {
+    animation: slideDown 0.5s ease forwards;
+}
+
+.contact-form.hiding {
+    animation: slideUp 0.5s ease forwards;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px) scaleY(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scaleY(1);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 1;
+        transform: translateY(0) scaleY(1);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(-20px) scaleY(0.9);
+    }
 }
 
 /* ==========================================
@@ -2290,7 +2384,7 @@ button {
     background: linear-gradient(135deg,
         rgba(10, 22, 40, 0.95) 0%,
         rgba(26, 41, 66, 0.9) 100%);
-    padding: var(--spacing-xl);
+    padding: var(--spacing-lg);
     border-radius: var(--radius-2xl);
     border: 2px solid rgba(0, 217, 255, 0.3);
     backdrop-filter: blur(20px);
@@ -2300,6 +2394,30 @@ button {
     position: relative;
     overflow: hidden;
     animation: formGlow 4s ease-in-out infinite;
+}
+
+/* Version compacte du formulaire */
+.contact-form--compact {
+    gap: var(--spacing-md);
+}
+
+.contact-form--compact .form__group {
+    margin-bottom: 0;
+}
+
+.contact-form--compact .form__label {
+    font-size: 0.875rem;
+    margin-bottom: 0.4rem;
+}
+
+.contact-form--compact .form__input,
+.contact-form--compact .form__textarea {
+    padding: 0.7rem 1rem 0.7rem 2.5rem;
+    font-size: 0.9rem;
+}
+
+.contact-form--compact .form__textarea {
+    min-height: 80px;
 }
 
 .premium-form::before {

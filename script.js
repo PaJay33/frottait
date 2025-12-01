@@ -369,6 +369,10 @@ if (problemsModal) {
 }
 
 // ==========================================
+// FORMULAIRE CONTACT - Plus besoin de toggle, formulaire visible par défaut
+// ==========================================
+
+// ==========================================
 // TOGGLE "VOIR PLUS" SERVICES
 // ==========================================
 const toggleServicesBtn = document.getElementById('toggleServices');
