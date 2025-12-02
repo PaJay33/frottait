@@ -1,0 +1,1273 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/tri1.png">
+    <title>À Propos - IATEK | Notre Histoire, Mission & Équipe</title>
+    <meta name="description" content="Découvrez IATEK : Développeur expert formé à Montréal, basé à Dakar. Notre mission, nos valeurs et notre engagement pour digitaliser l'Afrique avec excellence.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="images/logoiat.jpeg">
+
+    <style>
+        /* Styles spécifiques pour la page À propos */
+        .stats-banner {
+            background: linear-gradient(135deg, var(--primary-color, #0066cc) 0%, var(--secondary-color, #004999) 100%);
+            padding: 4rem 0;
+            margin: 4rem 0;
+        }
+
+        .stats-banner__grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 3rem;
+            text-align: center;
+        }
+
+        .stat-big {
+            color: white;
+        }
+
+        .stat-big__number {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+            line-height: 1;
+        }
+
+        .stat-big__label {
+            font-size: 1.1rem;
+            opacity: 0.95;
+            font-weight: 500;
+        }
+
+        .timeline {
+            position: relative;
+            padding: 2rem 0;
+        }
+
+        .timeline__item {
+            display: grid;
+            grid-template-columns: 120px 1fr;
+            gap: 2rem;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .timeline__year {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary-color, #0066cc);
+        }
+
+        .timeline__content h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline__content p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .team-card {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .team-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+        }
+
+        .team-card__avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin: 0 auto 1.5rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: white;
+        }
+
+        .team-card__name {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 0.3rem;
+        }
+
+        .team-card__role {
+            color: var(--primary-color, #0066cc);
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .team-card__bio {
+            color: #666;
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+
+        .certifications-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .cert-badge {
+            background: white;
+            border: 2px solid #e5e7eb;
+            border-radius: 10px;
+            padding: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .cert-badge:hover {
+            border-color: var(--primary-color, #0066cc);
+            transform: translateX(5px);
+        }
+
+        .cert-badge__icon {
+            font-size: 2.5rem;
+        }
+
+        .cert-badge__info h4 {
+            font-size: 1.1rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .cert-badge__info p {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .process-flow {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .process-step {
+            position: relative;
+            text-align: center;
+        }
+
+        .process-step__number {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: var(--primary-color, #0066cc);
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+        }
+
+        .process-step__title {
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: #00D9FF;
+        }
+
+        .process-step__desc {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        /* Valeurs Enhanced - Respecte le design premium */
+        .values-grid-enhanced {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .value-card-enhanced {
+            background: white;
+            border-radius: 1rem;
+            padding: 2rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid rgba(0, 217, 255, 0.1);
+        }
+
+        .value-card-enhanced:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            border-color: rgba(0, 217, 255, 0.4);
+        }
+
+        .value-card-enhanced__header {
+            margin-bottom: 1.5rem;
+        }
+
+        .value-card-enhanced__icon-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .value-card-enhanced__icon {
+            font-size: 3rem;
+        }
+
+        .value-card-enhanced__number {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #00D9FF;
+            opacity: 0.6;
+        }
+
+        .value-card-enhanced__title {
+            font-size: 1.4rem;
+            margin-bottom: 0.8rem;
+            color: #0A1628;
+            font-weight: 600;
+        }
+
+        .value-card-enhanced__description {
+            color: #4B5563;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+
+        .value-card-enhanced__highlights {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .highlight-badge {
+            background: rgba(0, 217, 255, 0.08);
+            color: #00D9FF;
+            padding: 0.4rem 0.8rem;
+            border-radius: 0.5rem;
+            font-size: 0.85rem;
+            font-weight: 600;
+            border: 1px solid rgba(0, 217, 255, 0.2);
+        }
+
+        /* Tech Stack Enhanced - Design premium */
+        .tech-intro {
+            background: linear-gradient(135deg, #0A1628 0%, #1a2942 50%, #2a3f5f 100%);
+            border-radius: 1.5rem;
+            padding: 3rem;
+            margin: 2rem 0 3rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .tech-intro::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 20% 50%, rgba(0, 217, 255, 0.1) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 50%, rgba(124, 58, 237, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .tech-intro__stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .tech-stat {
+            text-align: center;
+            color: white;
+        }
+
+        .tech-stat__number {
+            display: block;
+            font-size: 2.8rem;
+            font-weight: 900;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, #00D9FF 0%, #00B8D4 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .tech-stat__label {
+            font-size: 0.95rem;
+            opacity: 0.85;
+            font-weight: 500;
+        }
+
+        .expertise-grid-enhanced {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .expertise-card-enhanced {
+            background: white;
+            border-radius: 1rem;
+            padding: 2rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border-left: 3px solid #00D9FF;
+        }
+
+        .expertise-card-enhanced:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        .expertise-card-enhanced__header {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid rgba(0, 217, 255, 0.1);
+        }
+
+        .expertise-card-enhanced__icon-bg {
+            background: linear-gradient(135deg, #00D9FF 0%, #00B8D4 100%);
+            width: 50px;
+            height: 50px;
+            border-radius: 0.75rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            flex-shrink: 0;
+        }
+
+        .expertise-card-enhanced__title-section {
+            flex: 1;
+        }
+
+        .expertise-card-enhanced__title {
+            font-size: 1.3rem;
+            margin-bottom: 0.3rem;
+            color: #0A1628;
+            font-weight: 600;
+        }
+
+        .expertise-card-enhanced__subtitle {
+            font-size: 0.9rem;
+            color: #4B5563;
+        }
+
+        .expertise-card-enhanced__content {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .tech-category {
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+        }
+
+        .tech-category strong {
+            color: #0A1628;
+            font-size: 0.95rem;
+            font-weight: 600;
+        }
+
+        .tech-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .tech-badge {
+            background: #F9FAFB;
+            color: #374151;
+            padding: 0.4rem 0.9rem;
+            border-radius: 0.5rem;
+            font-size: 0.85rem;
+            font-weight: 500;
+            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid #E5E7EB;
+        }
+
+        .tech-badge:hover {
+            background: #0A1628;
+            color: white;
+            border-color: #00D9FF;
+            transform: translateY(-2px);
+        }
+
+        /* Tech badges avec couleurs spécifiques */
+        .tech-badge--react {
+            background: #61dafb20;
+            color: #61dafb;
+            border-color: #61dafb;
+        }
+
+        .tech-badge--vue {
+            background: #42b88320;
+            color: #42b883;
+            border-color: #42b883;
+        }
+
+        .tech-badge--angular {
+            background: #dd0 03120;
+            color: #dd0031;
+            border-color: #dd0031;
+        }
+
+        .tech-badge--node {
+            background: #68a06320;
+            color: #68a063;
+            border-color: #68a063;
+        }
+
+        .tech-badge--python {
+            background: #3776ab20;
+            color: #3776ab;
+            border-color: #3776ab;
+        }
+
+        .tech-badge--postgres {
+            background: #33679120;
+            color: #336791;
+            border-color: #336791;
+        }
+
+        .tech-badge--mongo {
+            background: #47a24820;
+            color: #47a248;
+            border-color: #47a248;
+        }
+
+        .tech-badge--redis {
+            background: #dc382d20;
+            color: #dc382d;
+            border-color: #dc382d;
+        }
+
+        .tech-badge--aws {
+            background: #ff990020;
+            color: #ff9900;
+            border-color: #ff9900;
+        }
+
+        .tech-badge--azure {
+            background: #0078d420;
+            color: #0078d4;
+            border-color: #0078d4;
+        }
+
+        .tech-badge--docker {
+            background: #2496ed20;
+            color: #2496ed;
+            border-color: #2496ed;
+        }
+
+        .tech-badge--openai {
+            background: #10a37f20;
+            color: #10a37f;
+            border-color: #10a37f;
+        }
+
+        .tech-badge--flutter {
+            background: #02569b20;
+            color: #02569b;
+            border-color: #02569b;
+        }
+
+        .bonus-tech-section {
+            background: linear-gradient(135deg, rgba(0, 217, 255, 0.05) 0%, rgba(124, 58, 237, 0.05) 100%);
+            border-radius: 1.5rem;
+            padding: 3rem;
+            margin-top: 3rem;
+            border: 1px solid rgba(0, 217, 255, 0.1);
+        }
+
+        .bonus-tech-section__title {
+            font-size: 1.8rem;
+            text-align: center;
+            margin-bottom: 2.5rem;
+            color: #0A1628;
+            font-weight: 700;
+        }
+
+        .bonus-tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .bonus-tech-category {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 0.75rem;
+            line-height: 1.6;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .bonus-tech-category:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+
+        .bonus-tech-category strong {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #0A1628;
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
+        .bonus-tech-category span {
+            color: #4B5563;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .timeline__item {
+                grid-template-columns: 80px 1fr;
+                gap: 1rem;
+            }
+
+            .timeline__year {
+                font-size: 1.5rem;
+            }
+
+            .stat-big__number {
+                font-size: 2.5rem;
+            }
+
+            .values-grid-enhanced {
+                grid-template-columns: 1fr;
+            }
+
+            .expertise-grid-enhanced {
+                grid-template-columns: 1fr;
+            }
+
+            .tech-intro__stats {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .tech-stat__number {
+                font-size: 2rem;
+            }
+
+            .bonus-tech-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header__content">
+                <div class="header__logo">
+                    <a href="index.html">
+                        <img src="images/logoiat.jpeg" alt="IATEK Logo" class="logo">
+                    </a>
+                </div>
+
+                <nav class="nav" id="mainNav">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="index.html" class="nav__link">Accueil</a></li>
+                        <li class="nav__item"><a href="index.html#services" class="nav__link">Services</a></li>
+                        <li class="nav__item"><a href="index.html#tarifs" class="nav__link">Tarifs</a></li>
+                        <li class="nav__item"><a href="projets.html" class="nav__link">Projets</a></li>
+                        <li class="nav__item"><a href="apropos.html" class="nav__link active">À propos</a></li>
+                        <li class="nav__item"><a href="index.html#contact" class="nav__link nav__link--cta">Contact</a></li>
+                    </ul>
+                </nav>
+
+                <button class="hamburger" id="hamburger" aria-label="Menu">
+                    <span class="hamburger__line"></span>
+                    <span class="hamburger__line"></span>
+                    <span class="hamburger__line"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section À Propos -->
+    <section class="hero hero--small">
+        <div class="hero__bg"></div>
+        <div class="container">
+            <div class="hero__wrapper hero__wrapper--center">
+                <div class="hero__content hero__content--center">
+                    <div class="hero__badge">🇸🇳 Dakar • 🇨🇦 Montréal</div>
+                    <h1 class="hero__title">Notre Mission : <span class="highlight">Digitaliser l'Afrique avec Excellence</span></h1>
+                    <p class="hero__subtitle">Une équipe passionnée, une vision claire : créer des solutions digitales qui font vraiment la différence pour les entreprises africaines.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Banner -->
+    <section class="stats-banner">
+        <div class="container">
+            <div class="stats-banner__grid">
+                <div class="stat-big">
+                    <div class="stat-big__number">2025</div>
+                    <div class="stat-big__label">Année de création</div>
+                </div>
+                <div class="stat-big">
+                    <div class="stat-big__number">50+</div>
+                    <div class="stat-big__label">Projets livrés avec succès</div>
+                </div>
+                <div class="stat-big">
+                    <div class="stat-big__number">98%</div>
+                    <div class="stat-big__label">Taux de satisfaction client</div>
+                </div>
+                <div class="stat-big">
+                    <div class="stat-big__number">24/7</div>
+                    <div class="stat-big__label">Support technique disponible</div>
+                </div>
+                <div class="stat-big">
+                    <div class="stat-big__number">2h</div>
+                    <div class="stat-big__label">Temps de réponse moyen</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Notre Histoire -->
+    <section class="about-story">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Notre histoire</span>
+                <h2 class="section-title">Comment IATEK est née</h2>
+                <p class="section-subtitle">De Montréal à Dakar : une vision, une mission</p>
+            </div>
+
+            <div class="about-story__grid">
+                <div class="about-story__content">
+                    <div class="about-story__text">
+                        <p>
+                            IATEK est née d'une conviction profonde : <strong>l'Afrique mérite les mêmes standards de qualité technologique que partout ailleurs dans le monde</strong>, mais à des prix adaptés à sa réalité économique.
+                        </p>
+                        <p>
+                            Fondée par un développeur expert formé et basé à Montréal, notre entreprise a été créée avec une mission claire : offrir aux entreprises africaines l'accès à une expertise de classe mondiale sans compromettre la qualité.
+                        </p>
+                        <p>
+                            Après des années d'expérience dans l'écosystème tech nord-américain, travaillant avec des startups innovantes et des entreprises établies, notre fondateur a décidé de mettre son expertise au service du continent africain, en commençant par le Sénégal.
+                        </p>
+                        <p>
+                            L'objectif est clair : <strong>prouver que l'excellence technologique n'a pas de frontières</strong> et que les entreprises africaines peuvent avoir accès aux mêmes outils, technologies et méthodologies que Silicon Valley ou Montréal.
+                        </p>
+                        <p>
+                            Aujourd'hui, IATEK accompagne des startups ambitieuses, des PME en croissance et des entreprises établies dans leur transformation digitale, avec la même rigueur et le même professionnalisme que les grandes agences internationales.
+                        </p>
+                    </div>
+                </div>
+                <div class="about-story__visual">
+                    <div class="about-image-placeholder">
+                        <img src="images/logoiat.jpeg" alt="IATEK - Notre Histoire" class="about-image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline -->
+    <section class="about-timeline" style="background: #f9fafb; padding: 4rem 0;">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Notre parcours</span>
+                <h2 class="section-title">Les étapes clés de notre évolution</h2>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline__item">
+                    <div class="timeline__year">2022</div>
+                    <div class="timeline__content">
+                        <h3>Formation & Expertise à Montréal</h3>
+                        <p>Acquisition d'une expertise solide dans l'écosystème tech nord-américain. Travail avec des startups innovantes et maîtrise des technologies de pointe.</p>
+                    </div>
+                </div>
+
+                <div class="timeline__item">
+                    <div class="timeline__year">2024</div>
+                    <div class="timeline__content">
+                        <h3>Vision pour l'Afrique</h3>
+                        <p>Prise de conscience du potentiel immense du marché africain et de la nécessité d'offrir des services tech de qualité mondiale au continent.</p>
+                    </div>
+                </div>
+
+                <div class="timeline__item">
+                    <div class="timeline__year">2025</div>
+                    <div class="timeline__content">
+                        <h3>Lancement d'IATEK</h3>
+                        <p>Création officielle d'IATEK avec une mission claire : digitaliser les entreprises africaines avec excellence. Premiers clients au Sénégal.</p>
+                    </div>
+                </div>
+
+                <div class="timeline__item">
+                    <div class="timeline__year">2026</div>
+                    <div class="timeline__content">
+                        <h3>Croissance & Expansion</h3>
+                        <p>Plus de 50 projets livrés, expansion de l'équipe, et développement de nouvelles offres en IA et automatisation pour répondre aux besoins du marché.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Vision -->
+    <section class="mission-vision" style="padding: 4rem 0;">
+        <div class="container">
+            <div class="mission-vision__grid">
+                <!-- Mission -->
+                <div class="mission-card">
+                    <div class="mission-card__icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                            <path d="M2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                        </svg>
+                    </div>
+                    <h3 class="mission-card__title">Notre Mission</h3>
+                    <p class="mission-card__text">
+                        Créer des solutions digitales de classe mondiale qui propulsent les entreprises africaines vers la croissance et la compétitivité internationale. Nous croyons que chaque entreprise, quelle que soit sa taille, mérite d'accéder aux technologies les plus avancées.
+                    </p>
+                </div>
+
+                <!-- Vision -->
+                <div class="mission-card">
+                    <div class="mission-card__icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <path d="M12 6v6l4 2"></path>
+                        </svg>
+                    </div>
+                    <h3 class="mission-card__title">Notre Vision</h3>
+                    <p class="mission-card__text">
+                        Devenir le partenaire technologique de référence pour les entreprises africaines en quête d'excellence digitale. Nous aspirons à contribuer activement à la transformation numérique du continent, un projet à la fois.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nos Valeurs -->
+    <section class="values-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Nos valeurs</span>
+                <h2 class="section-title">Les Piliers de Notre Excellence</h2>
+                <p class="section-subtitle">6 valeurs fondamentales qui définissent notre ADN et guident chacune de nos décisions</p>
+            </div>
+
+            <div class="values-grid-enhanced">
+                <!-- Valeur 1 : Excellence -->
+                <div class="value-card-enhanced">
+                    <div class="value-card-enhanced__header">
+                        <div class="value-card-enhanced__icon-wrapper">
+                            <div class="value-card-enhanced__icon">🏆</div>
+                            <div class="value-card-enhanced__number">01</div>
+                        </div>
+                    </div>
+                    <h3 class="value-card-enhanced__title">Excellence Sans Compromis</h3>
+                    <p class="value-card-enhanced__description">
+                        Standards internationaux de Silicon Valley et Montréal. Code propre, architecture robuste, design soigné. Nous livrons du travail dont nous sommes fiers.
+                    </p>
+                    <div class="value-card-enhanced__highlights">
+                        <span class="highlight-badge">Code Review</span>
+                        <span class="highlight-badge">Tests Rigoureux</span>
+                        <span class="highlight-badge">Documentation</span>
+                    </div>
+                </div>
+
+                <!-- Valeur 2 : Transparence -->
+                <div class="value-card-enhanced">
+                    <div class="value-card-enhanced__header">
+                        <div class="value-card-enhanced__icon-wrapper">
+                            <div class="value-card-enhanced__icon">💎</div>
+                            <div class="value-card-enhanced__number">02</div>
+                        </div>
+                    </div>
+                    <h3 class="value-card-enhanced__title">Transparence Totale</h3>
+                    <p class="value-card-enhanced__description">
+                        Communication honnête à chaque étape. Prix fixes, délais clairs, reporting en temps réel. Vous savez toujours où vous en êtes.
+                    </p>
+                    <div class="value-card-enhanced__highlights">
+                        <span class="highlight-badge">Zéro Frais Cachés</span>
+                        <span class="highlight-badge">Updates Quotidiens</span>
+                        <span class="highlight-badge">Accès Dashboard</span>
+                    </div>
+                </div>
+
+                <!-- Valeur 3 : Innovation -->
+                <div class="value-card-enhanced">
+                    <div class="value-card-enhanced__header">
+                        <div class="value-card-enhanced__icon-wrapper">
+                            <div class="value-card-enhanced__icon">🚀</div>
+                            <div class="value-card-enhanced__number">03</div>
+                        </div>
+                    </div>
+                    <h3 class="value-card-enhanced__title">Innovation Continue</h3>
+                    <p class="value-card-enhanced__description">
+                        Toujours à la pointe des nouvelles technologies. IA, automatisation, cloud : nous adoptons ce qui fonctionne pour vous donner l'avantage.
+                    </p>
+                    <div class="value-card-enhanced__highlights">
+                        <span class="highlight-badge">IA Générative</span>
+                        <span class="highlight-badge">Automatisation</span>
+                        <span class="highlight-badge">Tech Moderne</span>
+                    </div>
+                </div>
+
+                <!-- Valeur 4 : Accessibilité -->
+                <div class="value-card-enhanced">
+                    <div class="value-card-enhanced__header">
+                        <div class="value-card-enhanced__icon-wrapper">
+                            <div class="value-card-enhanced__icon">🌍</div>
+                            <div class="value-card-enhanced__number">04</div>
+                        </div>
+                    </div>
+                    <h3 class="value-card-enhanced__title">Excellence Accessible</h3>
+                    <p class="value-card-enhanced__description">
+                        Qualité mondiale, prix locaux. Nous rendons l'expertise internationale accessible aux entreprises africaines sans compromis sur la qualité.
+                    </p>
+                    <div class="value-card-enhanced__highlights">
+                        <span class="highlight-badge">Prix FCFA</span>
+                        <span class="highlight-badge">Paiement Flexible</span>
+                        <span class="highlight-badge">Qualité Premium</span>
+                    </div>
+                </div>
+
+                <!-- Valeur 5 : Impact -->
+                <div class="value-card-enhanced">
+                    <div class="value-card-enhanced__header">
+                        <div class="value-card-enhanced__icon-wrapper">
+                            <div class="value-card-enhanced__icon">💪</div>
+                            <div class="value-card-enhanced__number">05</div>
+                        </div>
+                    </div>
+                    <h3 class="value-card-enhanced__title">Impact Mesurable</h3>
+                    <p class="value-card-enhanced__description">
+                        Chaque fonctionnalité a un but business clair. Nous livrons des résultats concrets : plus de ventes, moins de coûts, meilleure efficacité.
+                    </p>
+                    <div class="value-card-enhanced__highlights">
+                        <span class="highlight-badge">ROI Prouvé</span>
+                        <span class="highlight-badge">KPIs Clairs</span>
+                        <span class="highlight-badge">Analytics</span>
+                    </div>
+                </div>
+
+                <!-- Valeur 6 : Engagement -->
+                <div class="value-card-enhanced">
+                    <div class="value-card-enhanced__header">
+                        <div class="value-card-enhanced__icon-wrapper">
+                            <div class="value-card-enhanced__icon">🤝</div>
+                            <div class="value-card-enhanced__number">06</div>
+                        </div>
+                    </div>
+                    <h3 class="value-card-enhanced__title">Engagement Total</h3>
+                    <p class="value-card-enhanced__description">
+                        Votre succès = Notre succès. Support 24/7, accompagnement personnalisé, formation incluse. Nous sommes là au-delà du simple code.
+                    </p>
+                    <div class="value-card-enhanced__highlights">
+                        <span class="highlight-badge">Support 24/7</span>
+                        <span class="highlight-badge">Formation</span>
+                        <span class="highlight-badge">Évolutions</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Notre Équipe 
+    <section class="team-section" style="background: #f9fafb; padding: 4rem 0;">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Notre équipe</span>
+                <h2 class="section-title">Les talents derrière IATEK</h2>
+                <p class="section-subtitle">Une équipe multidisciplinaire et passionnée</p>
+            </div>
+
+            <div class="team-grid">
+                <div class="team-card">
+                    <div class="team-card__avatar">YD</div>
+                    <h3 class="team-card__name">Yatma DIEYE</h3>
+                    <p class="team-card__role">Fondateur & Lead Developer</p>
+                    <p class="team-card__bio">
+                        Expert développeur formé à Montréal avec 5+ ans d'expérience. Spécialiste en architecture logicielle, IA et développement full-stack.
+                    </p>
+                </div>
+
+                <div class="team-card">
+                    <div class="team-card__avatar" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">DV</div>
+                    <h3 class="team-card__name">Développeur Front-End</h3>
+                    <p class="team-card__role">UI/UX Specialist</p>
+                    <p class="team-card__bio">
+                        Passionné par l'expérience utilisateur et le design moderne. Expert React, Vue.js et animations web.
+                    </p>
+                </div>
+
+                <div class="team-card">
+                    <div class="team-card__avatar" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">SB</div>
+                    <h3 class="team-card__name">Ingénieur Backend</h3>
+                    <p class="team-card__role">API & Database Expert</p>
+                    <p class="team-card__bio">
+                        Spécialiste en architecture serveur, APIs RESTful et optimisation de bases de données. Expert Node.js et Python.
+                    </p>
+                </div>
+
+                <div class="team-card">
+                    <div class="team-card__avatar" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">CM</div>
+                    <h3 class="team-card__name">Chef de Projet</h3>
+                    <p class="team-card__role">Agile & Delivery Manager</p>
+                    <p class="team-card__bio">
+                        Coordination d'équipe, méthodologie Agile et livraison dans les délais. Votre point de contact principal.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    
+    <!-- Certifications & Reconnaissances -->
+    <section class="certifications-section" style="background: #f9fafb; padding: 4rem 0;">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Certifications & Reconnaissances</span>
+                <h2 class="section-title">Notre expertise reconnue</h2>
+                <p class="section-subtitle">Certifications professionnelles et formations continues</p>
+            </div>
+
+            <div class="certifications-grid">
+                <div class="cert-badge">
+                    <div class="cert-badge__icon">🎓</div>
+                    <div class="cert-badge__info">
+                        <h4>Formation Montréal</h4>
+                        <p>Développement Full-Stack</p>
+                    </div>
+                </div>
+
+                <div class="cert-badge">
+                    <div class="cert-badge__icon">☁️</div>
+                    <div class="cert-badge__info">
+                        <h4>AWS Certified</h4>
+                        <p>Solutions Architect</p>
+                    </div>
+                </div>
+
+                <div class="cert-badge">
+                    <div class="cert-badge__icon">🤖</div>
+                    <div class="cert-badge__info">
+                        <h4>AI & Machine Learning</h4>
+                        <p>Certification Advanced</p>
+                    </div>
+                </div>
+
+                <div class="cert-badge">
+                    <div class="cert-badge__icon">🔒</div>
+                    <div class="cert-badge__info">
+                        <h4>Cybersecurity Expert</h4>
+                        <p>Ethical Hacking & Pentesting</p>
+                    </div>
+                </div>
+
+                <div class="cert-badge">
+                    <div class="cert-badge__icon">📱</div>
+                    <div class="cert-badge__info">
+                        <h4>Mobile Development</h4>
+                        <p>React Native & Flutter</p>
+                    </div>
+                </div>
+
+                <div class="cert-badge">
+                    <div class="cert-badge__icon">⚙️</div>
+                    <div class="cert-badge__info">
+                        <h4>DevOps Engineer</h4>
+                        <p>CI/CD & Automation</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Notre Processus -->
+    <section class="process-section" style="padding: 4rem 0;">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Notre méthodologie</span>
+                <h2 class="section-title">Comment nous travaillons</h2>
+                <p class="section-subtitle">Un processus éprouvé pour garantir votre succès</p>
+            </div>
+
+            <div class="process-flow">
+                <div class="process-step">
+                    <div class="process-step__number">1</div>
+                    <h3 class="process-step__title">Découverte</h3>
+                    <p class="process-step__desc">Analyse de vos besoins et objectifs business</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="process-step__number">2</div>
+                    <h3 class="process-step__title">Planification</h3>
+                    <p class="process-step__desc">Stratégie technique et devis détaillé</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="process-step__number">3</div>
+                    <h3 class="process-step__title">Design</h3>
+                    <p class="process-step__desc">Maquettes UX/UI et prototypage</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="process-step__number">4</div>
+                    <h3 class="process-step__title">Développement</h3>
+                    <p class="process-step__desc">Code de qualité et tests continus</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="process-step__number">5</div>
+                    <h3 class="process-step__title">Lancement</h3>
+                    <p class="process-step__desc">Déploiement et mise en production</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="process-step__number">6</div>
+                    <h3 class="process-step__title">Support</h3>
+                    <p class="process-step__desc">Maintenance et évolutions continues</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pourquoi nous choisir -->
+    <section class="why-choose-us">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Pourquoi IATEK</span>
+                <h2 class="section-title">Ce qui nous différencie de la concurrence</h2>
+                <p class="section-subtitle">6 raisons de nous faire confiance</p>
+            </div>
+
+            <div class="why-grid">
+                <div class="why-card">
+                    <div class="why-card__number">🎓</div>
+                    <h3 class="why-card__title">Formation Internationale</h3>
+                    <p class="why-card__text">
+                        Développeur formé et expérimenté dans l'écosystème tech de Montréal, reconnu mondialement pour son excellence en développement logiciel.
+                    </p>
+                </div>
+
+                <div class="why-card">
+                    <div class="why-card__number">🌍</div>
+                    <h3 class="why-card__title">Compréhension Locale</h3>
+                    <p class="why-card__text">
+                        Basé à Dakar, nous comprenons les défis spécifiques des entreprises africaines : connectivité, budget, paiements locaux, contexte culturel.
+                    </p>
+                </div>
+
+                <div class="why-card">
+                    <div class="why-card__number">💰</div>
+                    <h3 class="why-card__title">Rapport Qualité/Prix Imbattable</h3>
+                    <p class="why-card__text">
+                        Qualité montréalaise, prix sénégalais. Nous offrons une expertise de classe mondiale à des tarifs adaptés au marché africain.
+                    </p>
+                </div>
+
+                <div class="why-card">
+                    <div class="why-card__number">⚡</div>
+                    <h3 class="why-card__title">Réactivité & Disponibilité</h3>
+                    <p class="why-card__text">
+                        Support 24/7, réponse sous 2h en moyenne. Nous sommes là quand vous avez besoin de nous, pas seulement pendant les heures de bureau.
+                    </p>
+                </div>
+
+                <div class="why-card">
+                    <div class="why-card__number">🔧</div>
+                    <h3 class="why-card__title">Méthodologie Éprouvée</h3>
+                    <p class="why-card__text">
+                        Développement Agile, tests rigoureux, documentation complète. Nous suivons les meilleures pratiques de l'industrie tech mondiale.
+                    </p>
+                </div>
+
+                <div class="why-card">
+                    <div class="why-card__number">📈</div>
+                    <h3 class="why-card__title">Focus sur les Résultats</h3>
+                    <p class="why-card__text">
+                        Chaque projet doit générer de la valeur mesurable : plus de ventes, moins de coûts, meilleure productivité. Nous livrons des résultats, pas juste du code.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Témoignages -->
+    <section class="testimonials" style="background: #f9fafb;">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Témoignages</span>
+                <h2 class="section-title">Ce que disent nos clients</h2>
+                <p class="section-subtitle">La confiance de nos clients est notre plus grande récompense</p>
+            </div>
+
+            <div class="testimonials__grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-card__rating">
+                        <span class="star-filled">★★★★★</span>
+                    </div>
+                    <p class="testimonial-card__text">
+                        "IATEK a transformé notre infrastructure digitale. Leur expertise en IA nous a permis d'améliorer notre efficacité de 40%. Je recommande vivement!"
+                    </p>
+                    <div class="testimonial-card__footer">
+                        <div class="testimonial-card__avatar">
+                            <div class="avatar-placeholder">MD</div>
+                        </div>
+                        <div class="testimonial-card__author">
+                            <div class="testimonial-card__name">Moustapha Diagne</div>
+                            <div class="testimonial-card__position">Directeur Technique, InnovCorp</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-card__rating">
+                        <span class="star-filled">★★★★★</span>
+                    </div>
+                    <p class="testimonial-card__text">
+                        "Un partenaire de confiance pour notre startup. IATEK a concrétisé notre vision avec une plateforme de qualité exceptionnelle."
+                    </p>
+                    <div class="testimonial-card__footer">
+                        <div class="testimonial-card__avatar">
+                            <div class="avatar-placeholder">MS</div>
+                        </div>
+                        <div class="testimonial-card__author">
+                            <div class="testimonial-card__name">Mouha Seck</div>
+                            <div class="testimonial-card__position">CEO, TechStart Solutions</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-card__rating">
+                        <span class="star-filled">★★★★★</span>
+                    </div>
+                    <p class="testimonial-card__text">
+                        "Notre site e-commerce a dépassé nos attentes. Design moderne et rapide. Les ventes ont augmenté de 60% depuis le lancement!"
+                    </p>
+                    <div class="testimonial-card__footer">
+                        <div class="testimonial-card__avatar">
+                            <div class="avatar-placeholder">AD</div>
+                        </div>
+                        <div class="testimonial-card__author">
+                            <div class="testimonial-card__name">Aby Diop</div>
+                            <div class="testimonial-card__position">Fondatrice, BeautyBox</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-box">
+                <div class="cta-box__content">
+                    <h2 class="cta-box__title">Prêt à travailler avec nous ?</h2>
+                    <p class="cta-box__text">Discutons de votre projet et voyons comment nous pouvons vous aider à atteindre vos objectifs digitaux</p>
+                </div>
+                <div class="cta-box__actions">
+                    <a href="index.html#contact" class="btn btn--primary btn--large">Demander un devis gratuit</a>
+                    <a href="mailto:contact.iatech@gmail.com" class="btn btn--secondary btn--large">Nous contacter</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__main">
+                <div class="footer__brand">
+                    <img src="images/logoiat.jpeg" alt="IATEK Logo" class="footer__logo">
+                    <p class="footer__tagline">Votre partenaire digital pour créer, innover et réussir. De l'idée au lancement, nous transformons vos projets en succès.</p>
+                </div>
+
+                <div class="footer__links-grid">
+                    <div class="footer__column">
+                        <h4 class="footer__heading">Services</h4>
+                        <ul class="footer__list">
+                            <li><a href="index.html#services">Sites web</a></li>
+                            <li><a href="index.html#services">Cybersécurité</a></li>
+                            <li><a href="index.html#services">Solutions IA</a></li>
+                            <li><a href="index.html#services">Support technique</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer__column">
+                        <h4 class="footer__heading">Entreprise</h4>
+                        <ul class="footer__list">
+                            <li><a href="apropos.html">À propos</a></li>
+                            <li><a href="index.html#partenaires">Partenaires</a></li>
+                            <li><a href="index.html#temoignages">Témoignages</a></li>
+                            <li><a href="projets.html">Portfolio</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer__column">
+                        <h4 class="footer__heading">Contact</h4>
+                        <ul class="footer__list">
+                            <li><a href="mailto:contact.iatech@gmail.com">contact.iatech@gmail.com</a></li>
+                            <li><a href="tel:+1">Canada : +1 XXX XXX XXX</a></li>
+                            <li>Montréal, QC 🇨🇦</li>
+                            <li>Dakar 🇸🇳</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer__bottom">
+                <div class="footer__copyright">
+                    <p>&copy; 2025 IATEK. Tous droits réservés.</p>
+                </div>
+                <div class="footer__legal">
+                    <a href="#">Mentions légales</a>
+                    <span>•</span>
+                    <a href="#">Politique de confidentialité</a>
+                    <span>•</span>
+                    <a href="#">CGV</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
